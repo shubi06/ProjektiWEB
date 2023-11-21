@@ -9,7 +9,8 @@
 
 .header {
     padding: 10px 50px; 
-    background-color:#0d9c80 ;
+   background:#21cdc1;
+  
     }
 
     
@@ -49,32 +50,34 @@
     }
 
 /* SECTION 1 */
-
 .content {
     background-image: url(FOTO2.jpg);
     width: 100%;
-    height: 720px;
+    height: 700px;
     background-size: 100% 100%;
     display: flex;
     justify-content: flex-start;
-}
+} 
+   
+
 
     .textbox {
         display:flex;
         margin-left: 50px;
-        margin-top: 200px
+        justify-content: center;
+        align-items: center;
     }
 
     .textbox h2{
         color: rgb(71, 70, 70);
-        font-size: 4em;
+        font-size: 3em;
         line-height: 1.3em;
         font-weight: 500;
         letter-spacing: 0.5mm;
     }
 
     .textbox h2 span{
-        color: #0d9c80;
+        color: #21cdc1;
         font-size: 1.2em;
         font-weight: 900;
     }
@@ -84,7 +87,7 @@
     }
 
     .textbox h2 .btn {
-        background-color:#0d9c80;
+      background-color: #21cdc1;
         color: white;
         border: none;
         padding: 10px 20px;
@@ -143,16 +146,19 @@
     margin-bottom: 40px;
 }
 
+
 .boxat img{
   display: flex;
   
 }
 
+
 .te {
-    color: #0d9c80;
+    color:#21cdc1;
     font-size: large;
     font-weight: 900;
 }
+
 
 
 /* SECTION 3 */
@@ -214,13 +220,15 @@ margin-top: 40px;
 
 
 
+
+
 /* LOG IN */
 
 .form-container {
    
     width: 320px;
     border-radius: 0.75rem;
-    background-color: #0d9c80;
+    background-color: #21cdc1;
     padding: 2rem;
     color: rgba(243, 244, 246, 1);
   }

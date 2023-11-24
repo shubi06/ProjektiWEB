@@ -8,7 +8,7 @@
 }
 
 .header {
-    padding: 10px 50px; 
+    padding: 10px 80px; 
    background:#21cdc1;
   
     }
@@ -22,7 +22,7 @@
   
     .nav-start {
         flex: 1;
-        justify-content:flex-start;
+      
     }
 
     .navigimi ul {
@@ -43,15 +43,34 @@
         text-decoration: none;
         color: white;
     }
+    .regj {
+      background-color: white;
+        list-style: none;
+    }
 
  
     .nav-start a:hover {
     color: rgb(71, 70, 70);
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SECTION 1 */
 .content {
     background-image: url(FOTO2.jpg);
+    background-attachment: scroll;
     width: 100%;
     height: 700px;
     background-size: 100% 100%;
@@ -63,7 +82,7 @@
 
     .textbox {
         display:flex;
-        margin-left: 50px;
+        margin-left: 80px;
         justify-content: center;
         align-items: center;
     }
@@ -74,6 +93,9 @@
         line-height: 1.3em;
         font-weight: 500;
         letter-spacing: 0.5mm;
+
+        animation: fadeInLeft;
+        animation-duration: 1s;
     }
 
     .textbox h2 span{
@@ -84,17 +106,21 @@
 
     .btn{
         display:flex;
+        margin-top: 20px;
+        background-color: #21cdc1;
+       
     }
 
     .textbox h2 .btn {
-      background-color: #21cdc1;
+     
         color: white;
         border: none;
         padding: 10px 20px;
         font-size: 17px;
         font-weight: bold;
+        cursor: pointer;
     }
-  
+    
     .textbox h2 .btn:hover {
         color:rgb(71, 70, 70);
      }
@@ -128,8 +154,8 @@
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-between;
-   margin-left: 50px;
-   margin-right: 50px;
+   margin-left: 80px;
+   margin-right: 80px;
 }
 
 .boxat {
@@ -144,6 +170,10 @@
     height: 250px;
     width: 300px;
     margin-bottom: 40px;
+
+  animation: lightSpeedInLeft;
+  animation-duration: 2s;
+  animation-direction: normal;
 }
 
 
@@ -182,7 +212,7 @@ margin-top: 40px;
 
 
 
-
+/* L*/
 
 
 
@@ -223,9 +253,19 @@ margin-top: 40px;
 
 
 /* LOG IN */
-
+.content1 {
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+  background-image: url(spital.jpg);
+  background-attachment: scroll;
+  width: 100%;
+  height: 700px;
+  background-size: 100% 100%;
+ 
+} 
 .form-container {
-   
+
     width: 320px;
     border-radius: 0.75rem;
     background-color: #21cdc1;

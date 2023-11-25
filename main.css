@@ -9,21 +9,19 @@
 
 .header {
     padding: 10px 80px; 
-   background:#21cdc1;
+    background-color: #21cdc1;
+   
   
     }
 
     
     .navigimi {
         display: flex;
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;        
     }
   
-    .nav-start {
-        flex: 1;
-      
-    }
 
     .navigimi ul {
         display: flex;
@@ -43,12 +41,19 @@
         text-decoration: none;
         color: white;
     }
+   
+
     .regj {
       background-color: white;
-        list-style: none;
-    }
-
- 
+      color: #21cdc1;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  
     .nav-start a:hover {
     color: rgb(71, 70, 70);
     }
@@ -95,7 +100,14 @@
         letter-spacing: 0.5mm;
 
         animation: fadeInLeft;
-        animation-duration: 1s;
+        animation-duration: 2s;
+    }
+    .paragrafi {
+      color: rgb(71, 70, 70);
+        font-size: 0.45em;
+        line-height: 1.2em;
+        letter-spacing: 0.0mm;
+      
     }
 
     .textbox h2 span{
@@ -103,6 +115,7 @@
         font-size: 1.2em;
         font-weight: 900;
     }
+    
 
     .btn{
         display:flex;
@@ -131,7 +144,9 @@
 
 
 .services {
-    background-color:#dee2e2;
+    background-color:rgb(248, 246, 246);
+    border: 1px;
+    border: #07705b;
 }
 
     .Teksti {
@@ -168,18 +183,15 @@
     border-radius: 20px;
     margin-top: 40px;
     height: 250px;
-    width: 300px;
-    margin-bottom: 40px;
+    width: 250px;
+    margin-bottom: 60px;
 
-  animation: lightSpeedInLeft;
-  animation-duration: 2s;
-  animation-direction: normal;
+ 
 }
 
 
 .boxat img{
-  display: flex;
-  
+  display: flex; 
 }
 
 

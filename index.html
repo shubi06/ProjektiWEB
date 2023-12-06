@@ -510,11 +510,11 @@ emailError.innerText='';
 //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme    EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
 if(!nameRegex.test(nameinput.value) && !MbiemriRegex.test(mbiemriInput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value)
 && !EmailRegex.test(emailInput.value)){
-nameError.style.color='red';
-MbiemriError.style.color='red';
-passwordiError.style.color='red';
-passwordiperseriteError.style.color='red';
-emailError.style.color='red';
+nameError.style.color='#FF0000';
+MbiemriError.style.color='#FF0000';
+passwordiError.style.color='#FF0000';
+passwordiperseriteError.style.color='#FF0000';
+emailError.style.color='#FF0000';
 
 nameError.innerText='Wrong Name';
 MbiemriError.innerText='Wrong Surname';

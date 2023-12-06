@@ -344,7 +344,7 @@ background-color: red;
 
 .medical-l{
     margin-top: 100px;
-    background-color: silver;
+    background-color: #f2f2f2;
     padding-top: 100px;
     padding-left: 24px;
     padding-right: 24px;
@@ -522,6 +522,7 @@ outline: none;
 margin-top: 10px;
 border: none;
 outline: none;
+background: transparent;
 
 }
 

@@ -143,6 +143,33 @@ return;
    }
   </script>
 
+        <script>
+          let nameRegex= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          let nameRegex1= ;
+      
+          function validateForm() {
+              let nameInput=document.getElementById('email');
+              let nameError = document.getElementById('emailError');
+              let passwordInput=document.getElementById('password');
+              let emailError = document.getElementById('passwordError');
+      
+              nameError.innerText = '';
+              emailError.innerText = '';
+      
+              if(!nameRegex.test(nameInput.value)) {
+                  nameError.innerText='Invalid email';
+                  return;
+              }
+      
+              if(!nameRegex1.test(passwordInput.value)) {
+                  PasswordError.innerText='Invalid password';
+                  return;
+              }
+      
+              alert('Name and password was correct');
+      
+          }
+      </script>
 
 
 </body>

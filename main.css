@@ -270,7 +270,7 @@
   height: 250px;
   width: 250px;
   border-radius: 10px;
-  display: flex;
+
   background-color: #ffffff;
   margin-top: 80px;
 
@@ -306,7 +306,7 @@
   display: flex;
   justify-content: center;
   align-items:center;
-  height: 80px;
+  height: 50px;
   width: 390px;
   border: none;
   border-radius: 10px;
@@ -315,7 +315,7 @@
   display: flex;
   justify-content: center;
   align-items:center;
-  height: 80px;
+  height: 50px;
   width: 390px;
   border: none;
   border-radius: 10px;
@@ -337,7 +337,7 @@
   display: flex;
   justify-content: center;
   align-items:center;
-  height: 80px;
+  height: 50px;
   width: 390px;
   border: none;
   border-radius: 10px;
@@ -357,7 +357,7 @@
   display: flex;
   justify-content: center;
   align-items:center;
-  height: 80px;
+  height: 50px;
   width: 390px;
   border: none;
   border-radius: 10px;
@@ -675,3 +675,4 @@
   line-height: 1rem;
   color: rgb(255, 255, 255);
 }
+

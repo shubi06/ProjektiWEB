@@ -55,7 +55,7 @@
 
 
 .nav-start a:hover {
-  color: rgb(71, 70, 70);
+  color: #474646;
 }
 
 
@@ -75,7 +75,7 @@
 .content {
   background-image: url(FOTO2.jpg);
   background-attachment: scroll;
-  width: 100%;
+  width: 95%;
   height: 700px;
   background-size: 100% 100%;
   display: flex;
@@ -92,7 +92,7 @@
 }
 
 .textbox h2 {
-  color: rgb(71, 70, 70);
+  color: #474646;
   font-size: 3em;
   line-height: 1.3em;
   font-weight: 500;
@@ -104,7 +104,7 @@
 
 .paragrafi {
   margin-top: 20px;
-  color: rgb(71, 70, 70);
+  color: #474646;
   font-size: 0.4em;
   line-height: 1.2em;
   letter-spacing: 0.0mm;
@@ -135,7 +135,7 @@
 }
 
 .textbox h2 .btn:hover {
-  color: rgb(71, 70, 70);
+  color: #474646;
 }
 
 
@@ -144,7 +144,7 @@
 
 
 .services {
-  background-color: rgb(248, 246, 246);
+  background-color: #f8f6f6;
 }
 
 .Teksti {
@@ -394,24 +394,16 @@
 /* SECTION 3 ME PJESEN E SLIDERIT */
 
 
-
-.Teksti1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.fototesliderit img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.Teksti1 p {
-  color: rgb(71, 70, 70);
-  font-size: 2em;
-  line-height: 1.2em;
-  font-weight: 600;
-  margin-top: 40px;
-}
-.Teksti1 p span{
-    color: #1C9FA7;
-}
+
+
+
+
 
 .card1 {
   width: 300px;
@@ -475,7 +467,7 @@
   background-color: #1C9FA7;
   padding: 4px 8px;
  
-}
+} 
 
 
 

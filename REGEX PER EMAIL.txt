@@ -1,0 +1,1 @@
+/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/                               iilirmisini4@gmail.com

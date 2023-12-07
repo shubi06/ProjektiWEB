@@ -25,28 +25,28 @@
         </div>
         
         
-        <div class="emri">
-          <input  class="inputat2222" style="border: none; outline: none;" type="text" name="emri" placeholder="Emri :" required>
+        <div class="emri" style="display: flex; align-items: center;">
+          <input  class="inputat2222" type="text"  id="emri" name="emri" placeholder="Emri :" required><label style="padding-left: 20px;" id="idname-error"></label>
         </div>
         
-        <div class="mbiemri">
-          <input class="inputat2222" type="text" name="mbiemri" placeholder="Mbiemri:" required>
+        <div class="mbiemri" style="display: flex; align-items: center;">
+          <input class="inputat2222"  type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri:" required><label style="padding-left: 20px;" id="idmbiemri"></label>
         </div>
         
-        <div class="password">
-          <input  class="inputat2222" type="password" name="password" placeholder="Passwordi:" required>
+        <div class="password" style="display: flex; align-items: center;">
+          <input  class="inputat2222" type="password" id="password" name="password" placeholder="Passwordi:" required><label style="padding-left: 20px;" id="idpasswordi"></label>
         </div>
         
-        <div class="password2">
-          <input  class="inputat2222" type="password" name="password" placeholder="Perserite Passwordin:" required> 
+        <div class="password2" style="display: flex; align-items: center;">
+          <input  class="inputat2222" type="password" id="passwordperserite" name="passwordperserite" placeholder="Perserite Passwordin:" required> <label style="padding-left: 20px; display: flex;" id="idperseritepsw"></label>
         </div>
         
-        <div class="emaili">
-          <input class="inputat2222"  type="email" name="email" placeholder="Emaili :" required>
+        <div class="emaili" style="display: flex; align-items: center;">
+          <input class="inputat2222"  type="email" id="email"  name="email" placeholder="Emaili :" required><label style="padding-left: 20px;" id="idEmail-error"></label>
         </div>
         
-        <div class="signup">
-          <input class="submit"  id="submitButton" style="border: none; background: transparent; margin-right: 25px;" type="submit" name="submit" placeholder="signup" value="Signup" required>   
+        <div class="signup" style="display: flex; align-items: center;">
+          <input class="submit"  id="submitButton" style="border: none; background: transparent; margin-right: 25px;" type="submit" name="submit" onclick="validimi()" placeholder="signup" value="Signup" required>   <label style="padding-left: 110px;" id="idname-error"></label>
         </div>
         
         <div class="already" style=" margin-left: 90px;     margin-top: 10px;">
@@ -81,34 +81,72 @@
         
         </div>
 
+        
 
         <script>
-          let nameRegex= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-          let nameRegex1= ;
-      
-          function validateForm() {
-              let nameInput=document.getElementById('email');
-              let nameError = document.getElementById('emailError');
-              let passwordInput=document.getElementById('password');
-              let emailError = document.getElementById('passwordError');
-      
-              nameError.innerText = '';
-              emailError.innerText = '';
-      
-              if(!nameRegex.test(nameInput.value)) {
-                  nameError.innerText='Invalid email';
-                  return;
-              }
-      
-              if(!nameRegex1.test(passwordInput.value)) {
-                  PasswordError.innerText='Invalid password';
-                  return;
-              }
-      
-              alert('Name and password was correct');
-      
-          }
-      </script>
+          //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme    EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
+          let nameRegex=/^[A-Z]{1}\w[a-z]{2,10}/;
+          let passwordRegex=/[a-zA-Z]{7,15}[0-9]{1,5}/;
+          let EmailRegex=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;
+          let MbiemriRegex=/^[A-Z]{1}\w[a-z]{3,16}/;
+        
+          function validimi(){
+          //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme    EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
+          let nameinput=document.getElementById('emri');
+          let mbiemriInput=document.getElementById('mbiemri');
+          let password=document.getElementById('password');
+          let passwordperseriteInput=document.getElementById('passwordperserite');
+          let emailInput=document.getElementById('email');
+        
+          let nameError=document.getElementById('idname-error');
+          let MbiemriError=document.getElementById('idmbiemri');
+          let passwordiError=document.getElementById('idpasswordi');
+          let passwordiperseriteError=document.getElementById('idperseritepsw');
+          let emailError=document.getElementById('idEmail-error');
+        
+        
+        nameError.innerText='';
+        MbiemriError.innerText='';
+        passwordiError.innerText='';
+        passwordiperseriteError.innerText='';
+        emailError.innerText='';
+        
+        //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme  EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
+        if(!nameRegex.test(nameinput.value) && !MbiemriRegex.test(mbiemriInput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value) && !EmailRegex.test(emailInput.value)){
+        nameError.style.color='#FF0000';
+        MbiemriError.style.color='#FF0000';
+        passwordiError.style.color='#FF0000';
+        passwordiperseriteError.style.color='#FF0000';
+        emailError.style.color='#FF0000';
+        
+        nameError.innerText='Wrong Name';
+        MbiemriError.innerText='Wrong Surname';
+        passwordiError.innerText='Wrong Password';
+        passwordiperseriteError.innerText='Wrong Password';
+        emailError.innerText='Wrong Email';
+        alert("Ju lutemi mbushni te dhenat me saktesi !");
+        
+        return;
+        }
+        //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme    EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
+        else if(nameRegex.test(nameinput.value) && MbiemriRegex.test(mbiemriInput.value) && passwordRegex.test(password.value) && passwordRegex.test(passwordperseriteInput.value)
+        && EmailRegex.test(emailInput.value)) {
+        nameError.style.color='#26FF00';
+        MbiemriError.style.color='#26FF00';
+        passwordiError.style.color='#26FF00';
+        passwordiperseriteError.style.color='#26FF00';
+        emailError.style.color='#26FF00';
+        nameError.innerText='Success Name';
+        MbiemriError.innerText='Success Surname';
+        passwordiError.innerText='Success Password';
+        passwordiperseriteError.innerText='Re-Success Password';
+        emailError.innerText='Success Email';
+        alert("Ju keni shenuar te dhenat me sukses");
+        return;
+        }
+        }
+        </script>
+        
 
 
 </body>

@@ -52,20 +52,20 @@
 
         if(EMailREGEX.test(InputEMAIL.value)){
             EERROREMAIL.style.color='green';
-            EERROREMAIL.innerText='emaili eshte i sakte !!';
+            EERROREMAIL.innerText='Emaili eshte i sakte !!';
             if( !PAsswordREGEX.test(InputPassworDD.value)){
-                ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
+                ERORRPSW.innerText='Shkruane passwordin e sakte !!';
                 ERORRPSW.style.color='red';
                 alert("Ju lutemi plotesojeni kushtin");
                 return false;   
             }  
         }
         if(PAsswordREGEX.test(InputPassworDD.value)){
-            ERORRPSW.innerText='passwordi sakte !!';
+            ERORRPSW.innerText='Passwordi eshte i sakte !!';
                 ERORRPSW.style.color='green';
                if(!EMailREGEX.test(InputEMAIL.value)){
                 EERROREMAIL.style.color='red';
-            EERROREMAIL.innerText='emaili nuk eshte i sakte !!';
+            EERROREMAIL.innerText='Emaili nuk eshte i sakte !!';
             alert("Ju lutemi plotesojeni kushtin");
             return false;
                }
@@ -74,18 +74,18 @@
         if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
             EERROREMAIL.style.color='red';
             ERORRPSW.style.color='red';
-            EERROREMAIL.innerText='emaili nuk eshte i sakte !!';
-            ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
-            alert("emaili dhe passwordi jane te pasakte !!");
+            EERROREMAIL.innerText='Emaili nuk eshte i sakte !!';
+            ERORRPSW.innerText='Shkruane passwordin e sakte !!';
+            alert("Emaili dhe Passwordi jane te pasakte !!");
             return false;
         }
 
         if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
             EERROREMAIL.style.color='green';
             ERORRPSW.style.color='green';
-            EERROREMAIL.innerText='emaili  eshte i sakte !!';
-            ERORRPSW.innerText='passwordin eshte i sakte !!';
-            alert("emaili dhe passwordi jane te sakte !!");
+            EERROREMAIL.innerText='Emaili  eshte i sakte !!';
+            ERORRPSW.innerText='Passwordin eshte i sakte !!';
+            alert("Emaili dhe Passwordi jane te sakte !!");
             return true;
         }
 

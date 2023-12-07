@@ -14,24 +14,69 @@
         <form class="form">
             <div class="input-group">
                 <label for="username">Email </label>
-                <input type="email" id="email" placeholder="">
-                <div class="error-message" id="emailError"></div>
+                <input type="email" id="emailID" placeholder=""><label id="erroriemaili"for="email"></label>
+                <!-- <div class="error-message" id="emailError"></div> -->
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="">
-                <div class="error-message" id="passwordError"></div>
+                <input type="password" id="passwordID" placeholder=""><label  id="erroripasswordii" for="email"></label>
+                <!-- <div class="error-message" id="passwordError"></div> -->
                 <div class="forgot">
                     <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                 </div>
             </div>
-            <button class="sign" onclick='validateForm()'>Sign in</button>
+            <button class="sign" onclick='return LOGINValidation()'>Sign in</button>
         </form>
         <div class="social-message">
             <div class="line"></div>
             <p class="message">Login with social accounts</p>
             <div class="line"></div>
         </div>
+
+<script>
+
+    let EMailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;//shuajbbunjaku2@gmail.com
+    let PAsswordREGEX=/[a-zA-Z]{7,15}[0-9]{1,5}/;//passwordABC12
+
+
+    function LOGINValidation(){
+
+    let InputEMAIL=document.getElementById('emailID');
+    let InputPassworDD=document.getElementById('passwordID');
+
+    let EERROREMAIL=document.getElementById('erroriemaili');
+    let ERORRPSW=document.getElementById('erroripasswordii');
+
+    EERROREMAIL.innerText='';
+    ERORRPSW.innerText='';
+
+    if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
+        EERROREMAIL.style.color='red';
+        ERORRPSW.style.color='red';
+        EERROREMAIL.innerText='Ju lutemi shkruane emailin e sakte !!';
+        ERORRPSW.innerText='Ju lutemi shkruane passowrdin e sakte !!';
+        alert("Ju nuk keni shkruajtur mire te dhenat");
+         return false;
+    }
+    else if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
+        EERROREMAIL.style.color='green';
+        ERORRPSW.style.color='green';
+        EERROREMAIL.innerText='Ju keni shkruajtur emailin mire !!';
+        ERORRPSW.innerText='Ju keni shkruajtur passwordin mire !!';
+        alert("Ju keni shkruajtur mire te dhenat");
+           return true;
+    }
+    }
+
+
+
+
+</script>
+
+
+
+
+
         <!-- <div class="social-icons">
             <button aria-label="Log in with Google" class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
@@ -55,7 +100,7 @@
     </div>
 </div>
 
-<script>
+<!-- <script>
     let nameRegex= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     let passwordRegex= /^[a-zA-Z]\w{3,14}$/;
 
@@ -81,6 +126,6 @@
         alert('Succesfully');
 
     }
-</script>
+</script> -->
 </body>
 </html>

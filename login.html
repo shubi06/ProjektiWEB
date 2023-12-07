@@ -50,22 +50,60 @@
     EERROREMAIL.innerText='';
     ERORRPSW.innerText='';
 
-    if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
-        EERROREMAIL.style.color='red';
-        ERORRPSW.style.color='red';
-        EERROREMAIL.innerText='Ju lutemi shkruane emailin e sakte !!';
-        ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
-        alert("Ju nuk keni shkruajtur mire te dhenat");
-         return false;
-    }
-    else if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
-        EERROREMAIL.style.color='green';
-        ERORRPSW.style.color='green';
-        EERROREMAIL.innerText='Ju keni shkruajtur emailin mire !!';
-        ERORRPSW.innerText='Ju keni shkruajtur passwordin mire !!';
-        alert("Ju keni shkruajtur mire te dhenat");
-           return true;
-    }
+        if(EMailREGEX.test(InputEMAIL.value)){
+            EERROREMAIL.style.color='green';
+            EERROREMAIL.innerText='emaili eshte i sakte !!';
+            if( !PAsswordREGEX.test(InputPassworDD.value)){
+                ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
+                ERORRPSW.style.color='red';
+                alert("Ju lutemi plotesojeni kushtin");
+                return false;   
+            }  
+        }
+        if(PAsswordREGEX.test(InputPassworDD.value)){
+            ERORRPSW.innerText='passwordi sakte !!';
+                ERORRPSW.style.color='green';
+               if(!EMailREGEX.test(InputEMAIL.value)){
+                EERROREMAIL.style.color='red';
+            EERROREMAIL.innerText='emaili nuk eshte i sakte !!';
+            alert("Ju lutemi plotesojeni kushtin");
+            return false;
+               }
+        }
+        if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
+            EERROREMAIL.style.color='red';
+            ERORRPSW.style.color='red';
+            EERROREMAIL.innerText='emaili nuk eshte i sakte !!';
+            ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
+            alert("emaili dhe passwordi jane te pasakte !!");
+            return false;
+        }
+
+        if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
+            EERROREMAIL.style.color='green';
+            ERORRPSW.style.color='green';
+            EERROREMAIL.innerText='emaili  eshte i sakte !!';
+            ERORRPSW.innerText='passwordin eshte i sakte !!';
+            alert("emaili dhe passwordi jane te sakte !!");
+            return true;
+        }
+
+    // if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
+    //     EERROREMAIL.style.color='red';
+    //     ERORRPSW.style.color='red';
+    //     EERROREMAIL.innerText='Ju lutemi shkruane emailin e sakte !!';
+    //     ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
+    //     alert("Ju nuk keni shkruajtur mire te dhenat");
+    //      return false;
+    // }
+    // else if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
+    //     EERROREMAIL.style.color='green';
+    //     ERORRPSW.style.color='green';
+    //     EERROREMAIL.innerText='Ju keni shkruajtur emailin mire !!';
+    //     ERORRPSW.innerText='Ju keni shkruajtur passwordin mire !!';
+    //     alert("Ju keni shkruajtur mire te dhenat");
+    //        return true;
+    // }
     }
 
 

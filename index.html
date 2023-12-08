@@ -293,21 +293,21 @@
     border: none;
     margin-top: 35px;
     background: transparent;
-    outline: none;"required><label id="Numbererror2" style="margin-left: -20px;"></label>
+    outline: none;"required><label id="Numbererror2" style="margin-left: 5px;"></label>
   </div>
   <div class="divv2">
     <input class="inputat"  style="background-color:rgb(0, 128, 128);
     border: none;
     margin-top: 35px;
     background: transparent;
-    outline: none;" type="text" id="service" name="service" placeholder="Enter Service" required><label id="Serviceerror2"></label>
+    outline: none;" type="text" id="service" name="service" placeholder="Enter Service" required><label style="padding-left: 5px;" id="Serviceerror2"></label>
   </div>
   
   </div>
   <div class="nder" style="padding-left: 20px;">
-  <input class="input-ne-veti" id="input-1" type="text" name="email" placeholder="Enter your email" style=" border: none; outline: none; background: transparent;" required><label id="Emaileerror3"></label>
+  <input class="input-ne-veti" id="input-1" type="text" name="email" placeholder="Enter your email" style=" border: none; outline: none; background: transparent;" required><label id="Emaileerror3" style=" padding-left: 97px;"></label>
   </div>
-  <input class="input-ne-veti" id="input-2" type="submit" onclick="validimiKontakti()" name="submit" value="Submit" style="display: flex; text-decoration: none; color: black; width: 200px; margin: 20px; height: 30px; padding-top: 8px; border-radius: 12px; background-color: rgb(0, 128, 128); padding-left: 80px; margin-left: 670px;" >
+  <input class="input-ne-veti" id="input-2" type="submit" onclick=" return validimiKontakti()" name="submit" value="Submit" style="display: flex; text-decoration: none; color: black; width: 200px; margin: 20px; height: 30px; padding-top: 8px; border-radius: 12px; background-color: rgb(0, 128, 128); padding-left: 80px; margin-left: 670px;" >
   </form>
 
   <script>
@@ -338,39 +338,142 @@
     Serviceerror2.innerText='';
     Emaileerror3.innerText='';
     
-    
-      if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput .value) && !ServiceRegex.test(serviceInput.value)
-      && !EmailRegex.test(emailInputAgain.value)){
-        nameERRORI.style.color='#FF0000';
-        Emailierrori.style.color='#FF0000';
-        Numbererror2.style.color='#FF0000';
-        Serviceerror2.style.color='#FF0000';
-        Emaileerror3.style.color='#FF0000';
-    
-        nameERRORI.innerText='Wrong Name';
-        Emailierrori.innerText='Wrong Email';
-        Numbererror2.innerText='Wrong Number';
-        Serviceerror2.innerText='Wrong Sevice';
-        Emaileerror3.innerText='Wrong Email';
-        alert('Ju lutemi shkruani te dhenat e sakta !');
+      if(nameRegex.test(emriInput.value)){
+        nameERRORI.style.color='#58FF00';
+        nameERRORI.innerText=' Correct Name';
+        if(!EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value) &&  !EmailRegex.test(emailInputAgain.value)){
+           Emailierrori.style.color='red';
+           Numbererror2.style.color='red';
+           Serviceerror2.style.color='red';
+           Emaileerror3.style.color='red';
+
+           Emailierrori.innerText='Wrong Email';
+         Numbererror2.innerText='Wrong Number';
+         Serviceerror2.innerText='Wrong Sevice';
+         Emaileerror3.innerText='Wrong Email';
+         return false;
+        }
       }
-    else if(nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && PhoneRegex.test(phoneInput .value) && ServiceRegex.test(serviceInput.value)
-      && EmailRegex.test(emailInputAgain.value)){
-        nameERRORI.style.color='#26FF00';
-        Emailierrori.style.color='#26FF00';
-        Numbererror2.style.color='#26FF00';
-        Serviceerror2.style.color='#26FF00';
-        Emaileerror3.style.color='#26FF00';
+
+
+      if(EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value)){
+        Emailierrori.style.color='#58FF00';  
+         Emailierrori.innerText='Correct Email';
+         Emaileerror3.style.color='#58FF00';
+         Emaileerror3.innerText='Correct Email';
+        if(!nameRegex.test(emriInput.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value)){
+          nameERRORI.style.color='red';
+        nameERRORI.innerText=' Wrong Name';
+        
+           Numbererror2.style.color='red';
+           Serviceerror2.style.color='red';
+
+         Numbererror2.innerText='Wrong Number';
+         Serviceerror2.innerText='Wrong Sevice';
+        return false;
+        }
+      }
+
+
+
+      if(PhoneRegex.test(phoneInput.value)){
+        Numbererror2.style.color='#58FF00';
+        // Numbererror2.innerText='Wrong Number';
+        Numbererror2.innerText='Correct Number';
+        if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !ServiceRegex.test(serviceInput.value)){
+          nameERRORI.style.color='red';
+        nameERRORI.innerText=' Wrong Name';
+        
+           Serviceerror2.style.color='red';
+         Emailierrori.style.color='red';  
+         Emaileerror3.style.color='red';
+         Emailierrori.innerText='Incorrect Email';
+         Emaileerror3.innerText='Incorrect Email';
+         Serviceerror2.innerText='Incorrect Sevice';
+        return false;
+        }
+      }
+
+//
+      if(ServiceRegex.test(serviceInput.value)){
+        Serviceerror2.style.color='#58FF00';
+        Serviceerror2.innerText='Correct Service';
+        if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !PhoneRegex.test(phoneInput.value)){
+        nameERRORI.style.color='red';
+        nameERRORI.innerText=' Wrong Name';
+        Numbererror2.style.color='red';
+        Numbererror2.innerText='Incorrect Number';
+         Emailierrori.style.color='red';  
+         Emaileerror3.style.color='red';
+         Emailierrori.innerText='Incorrect Email';
+         Emaileerror3.innerText='Incorrect Email';
+        
+        return false;
+        }
+      }
+
+        if(ServiceRegex.test(serviceInput.value) && nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value) && PhoneRegex.test(phoneInput.value)){
+          nameERRORI.style.color='#58FF00';
+          nameERRORI.innerText=' Correct Name';
+          Numbererror2.style.color='#58FF00';
+          Numbererror2.innerText='Correct Number';
+          Emailierrori.style.color='#58FF00';  
+         Emaileerror3.style.color='#58FF00';
+         Emailierrori.innerText='Correct Email';
+         Emaileerror3.innerText='Correct Email';
+         Serviceerror2.style.color='#58FF00';
+         Serviceerror2.innerText='Correct Service';
+         return true;
+        }
+
+        if(!ServiceRegex.test(serviceInput.value) && !nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !PhoneRegex.test(phoneInput.value)){
+          nameERRORI.style.color='red';
+          nameERRORI.innerText=' Incorrect Name';
+          Numbererror2.style.color='red';
+          Numbererror2.innerText='Incorrect Number';
+          Emailierrori.style.color='red';  
+         Emaileerror3.style.color='red';
+         Emailierrori.innerText='Incorrect Email';
+         Emaileerror3.innerText='Incorrect Email';
+         Serviceerror2.style.color='red';
+         Serviceerror2.innerText='Incorrect Service';
+         return false;
+        }
+
+
+    }
+    //   if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput .value) && !ServiceRegex.test(serviceInput.value)
+    //   && !EmailRegex.test(emailInputAgain.value)){
+    //     nameERRORI.style.color='#FF0000';
+    //     Emailierrori.style.color='#FF0000';
+    //     Numbererror2.style.color='#FF0000';
+    //     Serviceerror2.style.color='#FF0000';
+    //     Emaileerror3.style.color='#FF0000';
+    
+    //     nameERRORI.innerText='Wrong Name';
+    //     Emailierrori.innerText='Wrong Email';
+    //     Numbererror2.innerText='Wrong Number';
+    //     Serviceerror2.innerText='Wrong Sevice';
+    //     Emaileerror3.innerText='Wrong Email';
+    //     alert('Ju lutemi shkruani te dhenat e sakta !');
+    //   }
+    // else if(nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && PhoneRegex.test(phoneInput .value) && ServiceRegex.test(serviceInput.value)
+    //   && EmailRegex.test(emailInputAgain.value)){
+    //     nameERRORI.style.color='#26FF00';
+    //     Emailierrori.style.color='#26FF00';
+    //     Numbererror2.style.color='#26FF00';
+    //     Serviceerror2.style.color='#26FF00';
+    //     Emaileerror3.style.color='#26FF00';
     
         
-        nameERRORI.innerText='Successfully Name';
-        Emailierrori.innerText='Successfully Email';
-        Numbererror2.innerText='Successfully Number';
-        Serviceerror2.innerText='Successfully Sevice';
-        Emaileerror3.innerText='Successfully Email';
-        alert('Urime ju keni shenuar te dhenat ne menyren e duhur !');
-    }
-    }
+    //     nameERRORI.innerText='Successfully Name';
+    //     Emailierrori.innerText='Successfully Email';
+    //     Numbererror2.innerText='Successfully Number';
+    //     Serviceerror2.innerText='Successfully Sevice';
+    //     Emaileerror3.innerText='Successfully Email';
+    //     alert('Urime ju keni shenuar te dhenat ne menyren e duhur !');
+    // }
+    // }
     </script>
 <br>
 
@@ -380,7 +483,7 @@
         <div class="g">
             <div style="display: flex; align-items: center;">
                 <img src="logo_+.png" style="width: 40px;" alt="+logo">
-                <h1 style="color: #389c84; padding-left: 10px;">Get Appointment</h1>
+                <h1 style="color: #008080; padding-left: 10px;">Get Appointment</h1>
             </div>
             <p style="margin-top: 20px;">Booking an online doctor appointment
                 was incerdibly convient and efficient. The
@@ -391,7 +494,7 @@
     </div>
     <div class="d1">
         <div class="g2" style="margin-left: 80px;">
-            <h1 style="color: #389c84; ">Menu</h1>
+            <h1 style="color: #008080; ">Menu</h1>
             <div class="okok1">
             <p class="okok">Home</p>
             <p class="okok">Service</p>
@@ -404,7 +507,7 @@
     </div>
     <div class="d1">
         <div class="g3">
-            <h1 style="color:#389c84;">Our Service</h1>
+            <h1 style="color:#008080;">Our Service</h1>
             <p class="okok2">First and Service</p>
             <p class="okok2">Dental Treatment</p>
             <p class="okok2">Eye Treatment</p>
@@ -416,7 +519,7 @@
     </div>
     <div class="d1">
         <div class="g4">
-            <h1 style="padding-left: 20px;color:#389c84;">Get Into Touch</h1>
+            <h1 style="padding-left: 20px;color:#008080;">Get Into Touch</h1>
             <div>
              <form>
            <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>

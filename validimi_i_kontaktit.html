@@ -1,61 +1,136 @@
 <script>
 
-function validimiKontakti(){
-    
-    let nameRegex=/^[A-z]{1}\w[a-z]{2,10}/;
-    let EmailRegex=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;
-    let PhoneRegex=/[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}/;
-    let ServiceRegex=/[a-z || A-Z]{4,25}/;
-    
-    let emriInput=document.getElementById('emri');
-    let emailInput=document.getElementById('email');
-    let phoneInput=document.getElementById('phone');
-    let serviceInput=document.getElementById('service');
-    let emailInputAgain=document.getElementById('input-1');
-    
-    let nameERRORI=document.getElementById('nameerror2');
-    let Emailierrori=document.getElementById('emailerror2');
-    let Numbererror2=document.getElementById('Numbererror2');
-    let Serviceerror2=document.getElementById('Serviceerror2');
-    let Emaileerror3=document.getElementById('Emaileerror3');
-    
-    nameERRORI.innerText='';
-    Emailierrori.innerText='';
-    Numbererror2.innerText='';
-    Serviceerror2.innerText='';
-    Emaileerror3.innerText='';
-    
-    
-      if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput .value) && !ServiceRegex.test(serviceInput.value)
-      && !EmailRegex.test(emailInputAgain.value)){
-        nameERRORI.style.color='#FF0000';
-        Emailierrori.style.color='#FF0000';
-        Numbererror2.style.color='#FF0000';
-        Serviceerror2.style.color='#FF0000';
-        Emaileerror3.style.color='#FF0000';
-    
-        nameERRORI.innerText='Wrong Name';
-        Emailierrori.innerText='Wrong Email';
-        Numbererror2.innerText='Wrong Number';
-        Serviceerror2.innerText='Wrong Sevice';
-        Emaileerror3.innerText='Wrong Email';
-        alert('Ju lutemi shkruani te dhenat e sakta !');
-      }
-    else if(nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && PhoneRegex.test(phoneInput .value) && ServiceRegex.test(serviceInput.value)
-      && EmailRegex.test(emailInputAgain.value)){
-        nameERRORI.style.color='#26FF00';
-        Emailierrori.style.color='#26FF00';
-        Numbererror2.style.color='#26FF00';
-        Serviceerror2.style.color='#26FF00';
-        Emaileerror3.style.color='#26FF00';
-    
-        
-        nameERRORI.innerText='Successfully Name';
-        Emailierrori.innerText='Successfully Email';
-        Numbererror2.innerText='Successfully Number';
-        Serviceerror2.innerText='Successfully Sevice';
-        Emaileerror3.innerText='Successfully Email';
-        alert('Urime ju keni shenuar te dhenat ne menyren e duhur !');
-    }
-    }
-    </script>
+
+  function validimiKontakti(){
+  
+  let nameRegex=/^[A-z]{1}\w[a-z]{2,10}/;
+  let EmailRegex=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;
+  let PhoneRegex=/[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}/;
+  let ServiceRegex=/[a-z || A-Z]{4,25}/;
+  
+  let emriInput=document.getElementById('emri');
+  let emailInput=document.getElementById('email');
+  let phoneInput=document.getElementById('phone');
+  let serviceInput=document.getElementById('service');
+  let emailInputAgain=document.getElementById('input-1');
+  
+  let nameERRORI=document.getElementById('nameerror2');
+  let Emailierrori=document.getElementById('emailerror2');
+  let Numbererror2=document.getElementById('Numbererror2');
+  let Serviceerror2=document.getElementById('Serviceerror2');
+  let Emaileerror3=document.getElementById('Emaileerror3');
+  
+  nameERRORI.innerText='';
+  Emailierrori.innerText='';
+  Numbererror2.innerText='';
+  Serviceerror2.innerText='';
+  Emaileerror3.innerText='';
+  
+  
+  if(nameRegex.test(emriInput.value)){
+          nameERRORI.style.color='#58FF00';
+          nameERRORI.innerText=' Correct Name';
+          if(!EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value) &&  !EmailRegex.test(emailInputAgain.value)){
+             Emailierrori.style.color='red';
+             Numbererror2.style.color='red';
+             Serviceerror2.style.color='red';
+             Emaileerror3.style.color='red';
+             Emailierrori.innerText='Wrong Email';
+           Numbererror2.innerText='Wrong Number';
+           Serviceerror2.innerText='Wrong Sevice';
+           Emaileerror3.innerText='Wrong Email';
+           alert("Ju lutemi shkruani ashtu sic duhet te dhenat !!");
+           return false;
+          }
+        }
+  
+        if(EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value)){
+          Emailierrori.style.color='#58FF00';  
+           Emailierrori.innerText='Correct Email';
+           Emaileerror3.style.color='#58FF00';
+           Emaileerror3.innerText='Correct Email';
+          if(!nameRegex.test(emriInput.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value)){
+            nameERRORI.style.color='red';
+          nameERRORI.innerText=' Wrong Name';
+          Numbererror2.style.color='red';
+             Serviceerror2.style.color='red';
+           Numbererror2.innerText='Wrong Number';
+           Serviceerror2.innerText='Wrong Sevice';
+           alert("Ju lutemi shkruani ashtu sic duhet te dhenat !!");
+          return false;
+          }
+        }
+  
+        if(PhoneRegex.test(phoneInput.value)){
+          Numbererror2.style.color='#58FF00';
+          Numbererror2.innerText='Correct Number';
+          if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !ServiceRegex.test(serviceInput.value)){
+           nameERRORI.style.color='red';
+           nameERRORI.innerText=' Wrong Name';
+           Serviceerror2.style.color='red';
+           Serviceerror2.innerText='Incorrect Sevice';
+           Emailierrori.style.color='red';  
+           Emaileerror3.style.color='red';
+           Emailierrori.innerText='Incorrect Email';
+           Emaileerror3.innerText='Incorrect Email';
+           alert("Ju lutemi shkruani ashtu sic duhet te dhenat !!");
+          return false;
+          }
+        }
+  
+        if(ServiceRegex.test(serviceInput.value)){
+          Serviceerror2.style.color='#58FF00';
+          Serviceerror2.innerText='Correct Service';
+          if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !PhoneRegex.test(phoneInput.value)){
+          nameERRORI.style.color='red';
+          nameERRORI.innerText=' Wrong Name';
+          Numbererror2.style.color='red';
+          Numbererror2.innerText='Incorrect Number';
+           Emailierrori.style.color='red';  
+           Emaileerror3.style.color='red';
+           Emailierrori.innerText='Incorrect Email';
+           Emaileerror3.innerText='Incorrect Email';
+           alert("Ju lutemi shkruani ashtu sic duhet te dhenat !!");
+          return false;
+          }
+        }
+  
+  
+        if(nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value) && PhoneRegex.test(phoneInput.value) && ServiceRegex.test(serviceInput.value)){
+            nameERRORI.style.color='#58FF00';
+            nameERRORI.innerText=' Correct Name';
+            Numbererror2.style.color='#58FF00';
+            Numbererror2.innerText='Correct Number';
+            Emailierrori.style.color='#58FF00';  
+           Emaileerror3.style.color='#58FF00';
+           Emailierrori.innerText='Correct Email';
+           Emaileerror3.innerText='Correct Email';
+           Serviceerror2.style.color='#58FF00';
+           Serviceerror2.innerText='Correct Service';
+           alert("Ju keni shkruajtur ashtu sic duhet te dhenat !!");
+           return true;
+          }
+  
+          if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value)){
+            nameERRORI.style.color='red';
+            nameERRORI.innerText=' Incorrect Name';
+            Numbererror2.style.color='red';
+            Numbererror2.innerText='Incorrect Number';
+            Emailierrori.style.color='red';  
+           Emaileerror3.style.color='red';
+           Emailierrori.innerText='Incorrect Email';
+           Emaileerror3.innerText='Incorrect Email';
+           Serviceerror2.style.color='red';
+           Serviceerror2.innerText='Incorrect Service';
+           alert("Ju lutemi shkruani ashtu sic duhet te dhenat !!");
+           return false;
+          }
+  }
+  
+  
+  
+  
+  
+  
+  
+  </script>

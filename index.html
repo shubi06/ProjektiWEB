@@ -351,12 +351,13 @@
          Numbererror2.innerText='Wrong Number';
          Serviceerror2.innerText='Wrong Sevice';
          Emaileerror3.innerText='Wrong Email';
+         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
          return false;
         }
       }
 
 
-      if(EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value)){
+      if(EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value)){ //shenim emaila per kontakt qe te jete valide duhet te jete e njejte nga user i caktuar nuk eshte profesionale te kete 2 emaila te ndryshme gjate kontaktimit
         Emailierrori.style.color='#58FF00';  
          Emailierrori.innerText='Correct Email';
          Emaileerror3.style.color='#58FF00';
@@ -370,6 +371,7 @@
 
          Numbererror2.innerText='Wrong Number';
          Serviceerror2.innerText='Wrong Sevice';
+         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
         return false;
         }
       }
@@ -390,6 +392,7 @@
          Emailierrori.innerText='Incorrect Email';
          Emaileerror3.innerText='Incorrect Email';
          Serviceerror2.innerText='Incorrect Sevice';
+         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
         return false;
         }
       }
@@ -407,7 +410,7 @@
          Emaileerror3.style.color='red';
          Emailierrori.innerText='Incorrect Email';
          Emaileerror3.innerText='Incorrect Email';
-        
+         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
         return false;
         }
       }
@@ -423,6 +426,7 @@
          Emaileerror3.innerText='Correct Email';
          Serviceerror2.style.color='#58FF00';
          Serviceerror2.innerText='Correct Service';
+         alert("Ju keni plotesuar sic duhet te dhenat");
          return true;
         }
 
@@ -437,6 +441,7 @@
          Emaileerror3.innerText='Incorrect Email';
          Serviceerror2.style.color='red';
          Serviceerror2.innerText='Incorrect Service';
+         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
          return false;
         }
 

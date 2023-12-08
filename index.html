@@ -57,7 +57,7 @@
                    
                   <div class="pjesa1">  <h2>Spitali më i vlerësuar <br> <span> në Europë. </span> 
                     <div class="paragrafi"> <p>Grieta është një platformë inovative shëndetësore  <br> që sjell një eksperiencë të re dhe të përmirësuar për pacientët. </p> </div>
-                       <a href="Termini.html" target="_blank"> <button class="btn"> CAKTO TERMININ </button></h2>  </a>
+                       <a style="text-decoration: none;" href="Termini.html" target="_blank"> <button class="btn"> CAKTO TERMININ </button></h2>  </a>
                 </div>  
     
         </div>
@@ -154,7 +154,7 @@
 <section class="medical-l" style="padding-bottom: 10px; margin-right: 0; margin-left: 0; padding-left: 0; padding-right: 0;">
 
 <div class="feedback" >
-  <span class="boldi" style="padding-top: 30px; color: #077979;">Clients Feedback</span>
+  <span class="boldi" style="padding-top: 30px;">Clients Feedback</span>
 </div>
 
 
@@ -166,7 +166,7 @@
     <div><img  src="foto3.png" alt="foto-e-klientes" style="margin-top: -130px; margin-right: 50%; float: right;"></div>
       <p class="allna" style="padding-left: 140px; padding-top: 20px; font-size: 1.5em;color: #008080;">Miss Allna<p>
 
-      <p class="animate__animated animate__bounce animate__delay-1s" style="padding-left: 35px; padding-right: 20px; margin-top: 40px;">This is easily the best concierge medical practice in the jupiter/
+      <p class="animate__animated animate__bounce animate__delay-1s" style="padding-left: 20px; padding-right: 20px; margin-top: 40px;">This is easily the best concierge medical practice in the jupiter/
           plam beach area | was a number of a different concierge
           practice before and that doctor didnt even go to the hosiptal to
           see me when | had an emergency.That,s definitely not the case
@@ -180,7 +180,10 @@
   <div class="totali2" style="width: 500px;">
       <div class="pershkrimi2">
         <div><img src="foto4.png" alt="foto-e-klientes" style="margin-top: -110px; margin-left: 30%;  width: 200px; background-size:contain; height: 150px;"></div>
-          <p class="Sir" style="padding-left: 220px; font-size: 1.5em;color: #008080; margin-top: -3px; ">Sir Mohsin<p>
+          <!-- <p class="Sir" style="padding-left: 230px; font-size: 1.5em;color: green; margin-top: -3px; ">Sir Mohsin<p> -->
+            <p class="Sir" style="padding-left: 220px; font-size: 1.5em;color: #008080; margin-top: -3px; ">Sir Mohsin<p></p>
+         
+          
           <p class="animate__animated animate__bounce animation-duration: 2s;" style="padding-left: 25px; padding-right: 20px; margin-top: 40px;">This is easily the best concierge medical practice in the jupiter/
               Dr.Shtern was recommended by a friend , and having just gone to
               see her myself, | can see why everyone reves about her. She is the
@@ -222,6 +225,7 @@
           </div>
           </div>
           
+
 <h1 class="titulli" style="padding-left: 670px; font-size: 50px;  margin-bottom: 40px; margin-top: -40px;  color: #008080;">Kontakti</h1>
 
 <div class="kryesori111">
@@ -302,21 +306,21 @@
     border: none;
     margin-top: 35px;
     background: transparent;
-    outline: none;"required><label id="Numbererror2" style="margin-left: 5px;"></label>
+    outline: none;"required><label id="Numbererror2" style="margin-left: -20px;"></label>
   </div>
   <div class="divv2">
     <input class="inputat"  style="background-color:rgb(0, 128, 128);
     border: none;
     margin-top: 35px;
     background: transparent;
-    outline: none;" type="text" id="service" name="service" placeholder="Enter Service" required><label style="padding-left: 5px;" id="Serviceerror2"></label>
+    outline: none;" type="text" id="service" name="service" placeholder="Enter Service" required><label id="Serviceerror2"></label>
   </div>
   
   </div>
   <div class="nder" style="padding-left: 20px;">
-  <input class="input-ne-veti" id="input-1" type="text" name="email" placeholder="Enter your email" style=" border: none; outline: none; background: transparent;" required><label id="Emaileerror3" style=" padding-left: 97px;"></label>
+  <input class="input-ne-veti" id="input-1" type="text" name="email" placeholder="Enter your email" style=" border: none; outline: none; background: transparent;" required><label id="Emaileerror3"></label>
   </div>
-  <input class="input-ne-veti" id="input-2" type="submit" onclick=" return validimiKontakti()" name="submit" value="Submit" style="display: flex; text-decoration: none; color: black; width: 200px; margin: 20px; height: 30px; padding-top: 8px; border-radius: 12px; background-color: rgb(0, 128, 128); padding-left: 80px; margin-left: 670px;" >
+  <input class="input-ne-veti" id="input-2" type="submit" onclick="validimiKontakti()" name="submit" value="Submit" style="display: flex; text-decoration: none; color: black; width: 200px; margin: 20px; height: 30px; padding-top: 8px; border-radius: 12px; background-color: rgb(0, 128, 128); padding-left: 80px; margin-left: 670px;" >
   </form>
 
   <script>
@@ -347,147 +351,40 @@
     Serviceerror2.innerText='';
     Emaileerror3.innerText='';
     
-      if(nameRegex.test(emriInput.value)){
-        nameERRORI.style.color='#58FF00';
-        nameERRORI.innerText=' Correct Name';
-        if(!EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value) &&  !EmailRegex.test(emailInputAgain.value)){
-           Emailierrori.style.color='red';
-           Numbererror2.style.color='red';
-           Serviceerror2.style.color='red';
-           Emaileerror3.style.color='red';
-
-           Emailierrori.innerText='Wrong Email';
-         Numbererror2.innerText='Wrong Number';
-         Serviceerror2.innerText='Wrong Sevice';
-         Emaileerror3.innerText='Wrong Email';
-         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
-         return false;
-        }
+    
+      if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput .value) && !ServiceRegex.test(serviceInput.value)
+      && !EmailRegex.test(emailInputAgain.value)){
+        nameERRORI.style.color='#FF0000';
+        Emailierrori.style.color='#FF0000';
+        Numbererror2.style.color='#FF0000';
+        Serviceerror2.style.color='#FF0000';
+        Emaileerror3.style.color='#FF0000';
+    
+        nameERRORI.innerText='Wrong Name';
+        Emailierrori.innerText='Wrong Email';
+        Numbererror2.innerText='Wrong Number';
+        Serviceerror2.innerText='Wrong Sevice';
+        Emaileerror3.innerText='Wrong Email';
+        alert('Ju lutemi shkruani te dhenat e sakta !');
       }
 
-
-      if(EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value)){ //shenim emaila per kontakt qe te jete valide duhet te jete e njejte nga user i caktuar nuk eshte profesionale te kete 2 emaila te ndryshme gjate kontaktimit
-        Emailierrori.style.color='#58FF00';  
-         Emailierrori.innerText='Correct Email';
-         Emaileerror3.style.color='#58FF00';
-         Emaileerror3.innerText='Correct Email';
-        if(!nameRegex.test(emriInput.value) && !PhoneRegex.test(phoneInput.value) && !ServiceRegex.test(serviceInput.value)){
-          nameERRORI.style.color='red';
-        nameERRORI.innerText=' Wrong Name';
+    else if(nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && PhoneRegex.test(phoneInput .value) && ServiceRegex.test(serviceInput.value)
+      && EmailRegex.test(emailInputAgain.value)){
+        nameERRORI.style.color='#26FF00';
+        Emailierrori.style.color='#26FF00';
+        Numbererror2.style.color='#26FF00';
+        Serviceerror2.style.color='#26FF00';
+        Emaileerror3.style.color='#26FF00';
+    
         
-           Numbererror2.style.color='red';
-           Serviceerror2.style.color='red';
-
-         Numbererror2.innerText='Wrong Number';
-         Serviceerror2.innerText='Wrong Sevice';
-         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
-        return false;
-        }
-      }
-
-
-
-      if(PhoneRegex.test(phoneInput.value)){
-        Numbererror2.style.color='#58FF00';
-        // Numbererror2.innerText='Wrong Number';
-        Numbererror2.innerText='Correct Number';
-        if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !ServiceRegex.test(serviceInput.value)){
-          nameERRORI.style.color='red';
-        nameERRORI.innerText=' Wrong Name';
-        
-           Serviceerror2.style.color='red';
-         Emailierrori.style.color='red';  
-         Emaileerror3.style.color='red';
-         Emailierrori.innerText='Incorrect Email';
-         Emaileerror3.innerText='Incorrect Email';
-         Serviceerror2.innerText='Incorrect Sevice';
-         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
-        return false;
-        }
-      }
-
-//
-      if(ServiceRegex.test(serviceInput.value)){
-        Serviceerror2.style.color='#58FF00';
-        Serviceerror2.innerText='Correct Service';
-        if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !PhoneRegex.test(phoneInput.value)){
-        nameERRORI.style.color='red';
-        nameERRORI.innerText=' Wrong Name';
-        Numbererror2.style.color='red';
-        Numbererror2.innerText='Incorrect Number';
-         Emailierrori.style.color='red';  
-         Emaileerror3.style.color='red';
-         Emailierrori.innerText='Incorrect Email';
-         Emaileerror3.innerText='Incorrect Email';
-         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
-        return false;
-        }
-      }
-
-        if(ServiceRegex.test(serviceInput.value) && nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && EmailRegex.test(emailInputAgain.value) && PhoneRegex.test(phoneInput.value)){
-          nameERRORI.style.color='#58FF00';
-          nameERRORI.innerText=' Correct Name';
-          Numbererror2.style.color='#58FF00';
-          Numbererror2.innerText='Correct Number';
-          Emailierrori.style.color='#58FF00';  
-         Emaileerror3.style.color='#58FF00';
-         Emailierrori.innerText='Correct Email';
-         Emaileerror3.innerText='Correct Email';
-         Serviceerror2.style.color='#58FF00';
-         Serviceerror2.innerText='Correct Service';
-         alert("Ju keni plotesuar sic duhet te dhenat");
-         return true;
-        }
-
-        if(!ServiceRegex.test(serviceInput.value) && !nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !EmailRegex.test(emailInputAgain.value) && !PhoneRegex.test(phoneInput.value)){
-          nameERRORI.style.color='red';
-          nameERRORI.innerText=' Incorrect Name';
-          Numbererror2.style.color='red';
-          Numbererror2.innerText='Incorrect Number';
-          Emailierrori.style.color='red';  
-         Emaileerror3.style.color='red';
-         Emailierrori.innerText='Incorrect Email';
-         Emaileerror3.innerText='Incorrect Email';
-         Serviceerror2.style.color='red';
-         Serviceerror2.innerText='Incorrect Service';
-         alert("Ju lutemi plotesoni sic duhet te dhenat !!");
-         return false;
-        }
-
-
+        nameERRORI.innerText='Successfully Name';
+        Emailierrori.innerText='Successfully Email';
+        Numbererror2.innerText='Successfully Number';
+        Serviceerror2.innerText='Successfully Sevice';
+        Emaileerror3.innerText='Successfully Email';
+        alert('Urime ju keni shenuar te dhenat ne menyren e duhur !');
     }
-    //   if(!nameRegex.test(emriInput.value) && !EmailRegex.test(emailInput.value) && !PhoneRegex.test(phoneInput .value) && !ServiceRegex.test(serviceInput.value)
-    //   && !EmailRegex.test(emailInputAgain.value)){
-    //     nameERRORI.style.color='#FF0000';
-    //     Emailierrori.style.color='#FF0000';
-    //     Numbererror2.style.color='#FF0000';
-    //     Serviceerror2.style.color='#FF0000';
-    //     Emaileerror3.style.color='#FF0000';
-    
-    //     nameERRORI.innerText='Wrong Name';
-    //     Emailierrori.innerText='Wrong Email';
-    //     Numbererror2.innerText='Wrong Number';
-    //     Serviceerror2.innerText='Wrong Sevice';
-    //     Emaileerror3.innerText='Wrong Email';
-    //     alert('Ju lutemi shkruani te dhenat e sakta !');
-    //   }
-    // else if(nameRegex.test(emriInput.value) && EmailRegex.test(emailInput.value) && PhoneRegex.test(phoneInput .value) && ServiceRegex.test(serviceInput.value)
-    //   && EmailRegex.test(emailInputAgain.value)){
-    //     nameERRORI.style.color='#26FF00';
-    //     Emailierrori.style.color='#26FF00';
-    //     Numbererror2.style.color='#26FF00';
-    //     Serviceerror2.style.color='#26FF00';
-    //     Emaileerror3.style.color='#26FF00';
-    
-        
-    //     nameERRORI.innerText='Successfully Name';
-    //     Emailierrori.innerText='Successfully Email';
-    //     Numbererror2.innerText='Successfully Number';
-    //     Serviceerror2.innerText='Successfully Sevice';
-    //     Emaileerror3.innerText='Successfully Email';
-    //     alert('Urime ju keni shenuar te dhenat ne menyren e duhur !');
-    // }
-    // }
+    }
     </script>
 <br>
 
@@ -497,7 +394,7 @@
         <div class="g">
             <div style="display: flex; align-items: center;">
                 <img src="logo_+.png" style="width: 40px;" alt="+logo">
-                <h1 style="color: #008080; padding-left: 10px;">Get Appointment</h1>
+                <h1 style="color: #389c84; padding-left: 10px;">Get Appointment</h1>
             </div>
             <p style="margin-top: 20px;">Booking an online doctor appointment
                 was incerdibly convient and efficient. The
@@ -508,7 +405,7 @@
     </div>
     <div class="d1">
         <div class="g2" style="margin-left: 80px;">
-            <h1 style="color: #008080; ">Menu</h1>
+            <h1 style="color: #389c84; ">Menu</h1>
             <div class="okok1">
             <p class="okok">Home</p>
             <p class="okok">Service</p>
@@ -521,7 +418,7 @@
     </div>
     <div class="d1">
         <div class="g3">
-            <h1 style="color:#008080;">Our Service</h1>
+            <h1 style="color:#389c84;">Our Service</h1>
             <p class="okok2">First and Service</p>
             <p class="okok2">Dental Treatment</p>
             <p class="okok2">Eye Treatment</p>
@@ -533,7 +430,7 @@
     </div>
     <div class="d1">
         <div class="g4">
-            <h1 style="padding-left: 20px;color:#008080;">Get Into Touch</h1>
+            <h1 style="padding-left: 20px;color:#389c84;">Get Into Touch</h1>
             <div>
              <form>
            <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>

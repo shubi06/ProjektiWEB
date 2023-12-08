@@ -76,11 +76,13 @@
         <div class="inputet">
             <div class="inputet1">
             <label for="name">Emri</label>
-            <input type="text">
+            <input id="emri" type="text">
+            <label id="nameerror2"></label>
         </div>
         <div class="inputet1">
             <label for="surname">Mbiemri</label>
-            <input type="text">
+            <input id="mbiemri" type="text">
+            <label id="mbiemrierror2"></label>
         </div>
         </div>
 
@@ -88,12 +90,13 @@
         <div class="inputet3">
         <div class="inputet1">
             <label for="telephone">Numri i telefonit</label>
-            <input type="tel" value="">
+            <input id="tel" type="tel" value="">
+            <label id="Numbererror2"></label>
         </div>
         <div class="inputet1">
             <label for="username">Sherbimi</label> 
             
-            <select name="sherbimet" id="Sherbimet">
+            <select name="sherbimet" id="sherbimet">
                 <option value="">Kujdes Intenziv</option>
                 <option value="">Ndihma e parë</option>
                 <option value="">Medikamente</option>
@@ -111,14 +114,170 @@
         <div class="inputet1">
             <label for="username">Ora</label>
             
-            <input type="time">
+            <input id="time" type="time">
         </div>
         <div class="inputet1">
             <label for="username">Data</label> 
-            <input type="date">
+            <input id="data" type="date">
         </div>
         </div>
-
+       <div class="butonicakto"> <button onclick='validimiKontakti1()' > CAKTO </button></div>
     </form>
+
+
+
+
+<footer>
+    <section class="klasaefooterit">
+        <div class="main999">
+          <div class="d1">
+              <div class="g">
+                  <div style="display: flex; align-items: center;">
+                      <img src="logo_+.png" style="width: 40px;" alt="+logo">
+                      <h1 style="color: #389c84; padding-left: 10px;">Get Appointment</h1>
+                  </div>
+                  <p style="margin-top: 20px;">Booking an online doctor appointment
+                      was incerdibly convient and efficient. The
+                      doctor provided excellent care. Making it
+                      a hassle-free and positive experience.
+                      </p>
+              </div>
+          </div>
+          <div class="d1">
+              <div class="g2" style="margin-left: 80px;">
+                  <h1 style="color: #389c84; ">Menu</h1>
+                  <div class="okok1">
+                  <p class="okok">Home</p>
+                  <p class="okok">Service</p>
+                  <p class="okok">Our Team</p>
+                  <p class="okok">About</p>
+                  <p class="okok">Blogs</p>
+                  <p class="okok">Booking</p>
+                </div>
+              </div>
+          </div>
+          <div class="d1">
+              <div class="g3">
+                  <h1 style="color:#389c84;">Our Service</h1>
+                  <p class="okok2">First and Service</p>
+                  <p class="okok2">Dental Treatment</p>
+                  <p class="okok2">Eye Treatment</p>
+                  <p class="okok2">Nose Treatment</p>
+                  <p class="okok2">Ambulance Service</p>
+                  <p class="okok2">Proper Mediation</p>
+                  <p class="okok2">Body Rashears</p>
+              </div>
+          </div>
+          <div class="d1">
+              <div class="g4">
+                  <h1 style="padding-left: 20px;color:#389c84;">Get Into Touch</h1>
+                  <div>
+                   <form>
+                 <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
+                 <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now" style="display: flex; text-decoration: none;color: black;width: 260px;  height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
+                  </form>    
+              </div>
+              </div>
+          </div>
+          </div>
+      
+          <script>
+        let EemailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/; 
+      
+      
+      
+            function validimiFOOTER(){
+        let iiinputEmail=document.getElementById('eemaiInputt');
+        let emAilError=document.getElementById('errorInputEmaili');
+        emAilError.innerText='';
+      
+              if(!EemailREGEX.test(iiinputEmail.value)){
+                emAilError.style.color='#FF0000';
+                emAilError.innerText='Wrong Email';
+                alert("Ju Lutemi Plotesoni Emailen Sic Duhet !!");
+                return;
+              }
+              else if(EemailREGEX.test(iiinputEmail.value)){
+                emAilError.style.color='green';
+                emAilError.innerText='Successfully Email';
+                alert("Ju Keni Plotesuar Emailen Sic Duhet !!"); 
+                return;
+              }
+          
+            }
+             
+      
+      
+      
+        </script>
+          <br>
+          <br>
+          <hr>
+          <br>
+          <br>
+      <p class="Copyright" style="padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright © 2023 Get Appointment All Right Reserved</p>  
+      </section>
+    </footer>
+
+
+
+
+    <script>
+    
+        function validimiKontakti1(){
+    
+    let nameRegex=/^[A-z]{1}\w[a-z]{2,10}/;
+    let surnameRegex=/^[A-z]{1}\w[a-z]{2,10}/;
+    let PhoneRegex=/[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}/;
+
+    
+    let emriInput=document.getElementById('emri');
+    let surnameInput=document.getElementById('mbiemri');
+    let phoneInput=document.getElementById('tel');
+    
+    let nameERRORI=document.getElementById('nameerror2');
+    let mbiemrierrori=document.getElementById('mbiemrierror2');
+    let Numbererror2=document.getElementById('Numbererror2');
+    
+    
+    nameERRORI.innerText='';
+    mbiemrierrori.innerText='';
+    Numbererror2.innerText='';
+    
+    
+    
+      if(!nameRegex.test(emriInput.value) && !PhoneRegex.test(phoneInput.value) && !surnameRegex.test(surnameInput.value)){
+        nameERRORI.style.color='#FF0000';
+        mbiemrierrori.style.color='#FF0000';
+        Numbererror2.style.color='#FF0000';
+        
+        nameERRORI.innerText='Wrong Name';
+        mbiemrierrori.innerText='Wrong Surname';
+        Numbererror2.innerText='Wrong Number';
+        alert('Ju lutemi shkruani te dhenat e sakta !');
+        return;
+      }
+      
+    else if(nameRegex.test(emriInput.value) && PhoneRegex.test(phoneInput.value) && surnameRegex.test(surnameInput.value)){
+        nameERRORI.style.color='#26FF00';
+        mbiemrierrori.style.color='#26FF00';
+        Numbererror2.style.color='#26FF00';
+    
+    
+        
+        nameERRORI.innerText='Successfully Name';
+        mbiemrierrori.innerText='Successfully Email';
+        Numbererror2.innerText='Successfully Number';
+      
+        alert('Urime ju keni shenuar te dhenat ne menyren e duhur !');
+        return ;
+    }
+    }
+    
+    </script>
+
+
+
+
 </body>
 </html>

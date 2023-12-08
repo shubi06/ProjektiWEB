@@ -22,95 +22,12 @@
                 <input type="password" id="passwordID" placeholder=""><label  id="erroripasswordii" for="email"></label>
                 <!-- <div class="error-message" id="passwordError"></div> -->
                 <div class="forgot">
-                    <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+                    <a rel="noopener noreferrer" href="#">Keni harruar Passwordin ?</a>
                 </div>
             </div>
-            <button class="sign" onclick='return LOGINValidation()'>Sign in</button>
+            <button class="sign" onclick='return LOGINValidation()'>KYQU</button>
         </form>
-        <div class="social-message">
-            <div class="line"></div>
-            <p class="message">Login with social accounts</p>
-            <div class="line"></div>
-        </div>
-
-<script>
-
-    let EMailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;//shuajbbunjaku2@gmail.com
-    let PAsswordREGEX=/[a-zA-Z]{7,15}[0-9]{1,5}/;//passwordABC12
-
-
-    function LOGINValidation(){
-
-    let InputEMAIL=document.getElementById('emailID');
-    let InputPassworDD=document.getElementById('passwordID');
-
-    let EERROREMAIL=document.getElementById('erroriemaili');
-    let ERORRPSW=document.getElementById('erroripasswordii');
-
-    EERROREMAIL.innerText='';
-    ERORRPSW.innerText='';
-
-        if(EMailREGEX.test(InputEMAIL.value)){
-            EERROREMAIL.style.color='green';
-            EERROREMAIL.innerText='Emaili eshte i sakte !!';
-            if( !PAsswordREGEX.test(InputPassworDD.value)){
-                ERORRPSW.innerText='Shkruane passwordin e sakte !!';
-                ERORRPSW.style.color='red';
-                alert("Ju lutemi plotesojeni kushtin");
-                return false;   
-            }  
-        }
-        if(PAsswordREGEX.test(InputPassworDD.value)){
-            ERORRPSW.innerText='Passwordi eshte i sakte !!';
-                ERORRPSW.style.color='green';
-               if(!EMailREGEX.test(InputEMAIL.value)){
-                EERROREMAIL.style.color='red';
-            EERROREMAIL.innerText='Emaili nuk eshte i sakte !!';
-            alert("Ju lutemi plotesojeni kushtin");
-            return false;
-               }
-        } 
-        
-        if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
-            EERROREMAIL.style.color='red';
-            ERORRPSW.style.color='red';
-            EERROREMAIL.innerText='Emaili nuk eshte i sakte !!';
-            ERORRPSW.innerText='Shkruane passwordin e sakte !!';
-            alert("Emaili dhe Passwordi jane te pasakte !!");
-            return false;
-        }
-
-        if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
-            EERROREMAIL.style.color='green';
-            ERORRPSW.style.color='green';
-            EERROREMAIL.innerText='Emaili  eshte i sakte !!';
-            ERORRPSW.innerText='Passwordin eshte i sakte !!';
-            alert("Emaili dhe Passwordi jane te sakte !!");
-            return true;
-        }
-
-    // if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
-    //     EERROREMAIL.style.color='red';
-    //     ERORRPSW.style.color='red';
-    //     EERROREMAIL.innerText='Ju lutemi shkruane emailin e sakte !!';
-    //     ERORRPSW.innerText='Ju lutemi shkruane passwordin e sakte !!';
-    //     alert("Ju nuk keni shkruajtur mire te dhenat");
-    //      return false;
-    // }
-    // else if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
-    //     EERROREMAIL.style.color='green';
-    //     ERORRPSW.style.color='green';
-    //     EERROREMAIL.innerText='Ju keni shkruajtur emailin mire !!';
-    //     ERORRPSW.innerText='Ju keni shkruajtur passwordin mire !!';
-    //     alert("Ju keni shkruajtur mire te dhenat");
-    //        return true;
-    // }    
-}
-
-
-
-
-</script>
+      
 
 
 
@@ -133,38 +50,73 @@
                 </svg>
             </button>
         </div> -->
-        <p class="signup">Don't have an account?
-            <a rel="noopener noreferrer" href="register.html" target="_blank" class="">Sign up</a>
+        <br>
+        <p class="signup">Nuk keni një llogari?
+            <a rel="noopener noreferrer" href="register.html" target="_blank" class=""><b>REGJISTROHU</b></a>
         </p>
     </div>
 </div>
+<script>
 
-<!-- <script>
-    let nameRegex= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    let passwordRegex= /^[a-zA-Z]\w{3,14}$/;
+    let EMailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;//shuajbbunjaku2@gmail.com
+    let PAsswordREGEX=/[a-zA-Z]{7,15}[0-9]{1,5}/;//passwordABC12
 
-    function validateForm() {
-        let nameInput=document.getElementById('email');
-        let email = document.getElementById('emailError');
-        let passwordInput=document.getElementById('password');
-        let passwordError = document.getElementById('passwordError');
 
-        emailError.innerText = '';
-        passwordError.innerText = '';
+    function LOGINValidation(){
 
-        if(!nameRegex.test(nameInput.value)) {
-            emailError.innerText='Invalid email';
-            return;
+    let InputEMAIL=document.getElementById('emailID');
+    let InputPassworDD=document.getElementById('passwordID');
+
+    let EERROREMAIL=document.getElementById('erroriemaili');
+    let ERORRPSW=document.getElementById('erroripasswordii');
+
+    EERROREMAIL.innerText='';
+    ERORRPSW.innerText='';
+
+        if(EMailREGEX.test(InputEMAIL.value)){
+           
+            if( !PAsswordREGEX.test(InputPassworDD.value)){
+                ERORRPSW.innerText='Password nuk është i saktë !!';
+                ERORRPSW.style.color='red';
+                alert("Ju lutemi shkruajeni mirë Passwordin");
+                return false;   
+            }  
+        }
+        if(PAsswordREGEX.test(InputPassworDD.value)){
+           
+               if(!EMailREGEX.test(InputEMAIL.value)){
+                EERROREMAIL.style.color='red';
+            EERROREMAIL.innerText='Emaili nuk është i saktë !!';
+            alert("Ju lutemi plotësojeni kushtin");
+            return false;
+               }
+        } 
+        
+        if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
+            EERROREMAIL.style.color='red';
+            ERORRPSW.style.color='red';
+            EERROREMAIL.innerText='Emaili nuk eshte i sakte !!';
+            ERORRPSW.innerText='Shkruane passwordin e sakte !!';
+            alert("Emaili dhe Passwordi jane te pasakte !!");
+            return false;
         }
 
-        if(!passwordRegex.test(passwordInput.value)) {
-            passwordError.innerText='Invalid password';
-            return;
+        if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
+            EERROREMAIL.style.color='green';
+            ERORRPSW.style.color='green';
+            EERROREMAIL.innerText='Emaili  eshte i sakte !!';
+            ERORRPSW.innerText='Passwordin eshte i sakte !!';
+          
+            return true;
         }
 
-        alert('Succesfully');
+ 
+}
 
-    }
-</script> -->
+
+
+
+</script>
+
 </body>
 </html>

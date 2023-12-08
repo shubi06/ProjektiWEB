@@ -119,7 +119,7 @@
 
 
 .btn {
-  display: flex;
+  /* display: flex;     - OSHT (PURPLE-UNDERLINE) VIZA TE CAKTO TERMININ -*/ 
   margin-top: 20px;
   background-color: #1C9FA7;
   border: none;

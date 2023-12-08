@@ -46,7 +46,7 @@
         </div>
         
         <div class="signup" style="display: flex; align-items: center;">
-          <input class="submit"  id="submitButton" style="border: none; background: transparent; margin-right: 25px;" type="submit" name="submit" onclick="validimi()" placeholder="signup" value="Signup" required>   <label style="padding-left: 110px;" id="idname-error"></label>
+          <input class="submit"  id="submitButton" style="border: none; background: transparent; margin-right: 25px;" type="submit" name="submit" onclick=" return validimi()" placeholder="signup" value="Signup" required>   <label style="padding-left: 110px;" id="idname-error"></label>
         </div>
         
         <div class="already" style=" margin-left: 90px;     margin-top: 10px;">
@@ -112,38 +112,107 @@
         emailError.innerText='';
         
         //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme  EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
-        if(!nameRegex.test(nameinput.value) && !MbiemriRegex.test(mbiemriInput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value) && !EmailRegex.test(emailInput.value)){
-        nameError.style.color='#FF0000';
-        MbiemriError.style.color='#FF0000';
-        passwordiError.style.color='#FF0000';
-        passwordiperseriteError.style.color='#FF0000';
-        emailError.style.color='#FF0000';
-        
-        nameError.innerText='Wrong Name';
+        if(nameRegex.test(nameinput.value)){
+          nameError.style.color='#58FF00';
+          nameError.innerText='Correct Name';
+          if(!MbiemriRegex.test(mbiemriInput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value) && !EmailRegex.test(emailInput.value)){
+            MbiemriError.style.color='red';
+        passwordiError.style.color='red';
+        passwordiperseriteError.style.color='red';
+        emailError.style.color='red';
+
         MbiemriError.innerText='Wrong Surname';
         passwordiError.innerText='Wrong Password';
-        passwordiperseriteError.innerText='Wrong Password';
+        passwordiperseriteError.innerText='Wrong Password Again';
         emailError.innerText='Wrong Email';
         alert("Ju lutemi mbushni te dhenat me saktesi !");
+        return false;
+          }
+        }
         
-        return;
+        if(MbiemriRegex.test(mbiemriInput.value)){  //nameRegex.test(nameinput.value)
+          MbiemriError.style.color='#58FF00';
+          MbiemriError.innerText='Correct Surname';
+          if(!nameRegex.test(nameinput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value) && !EmailRegex.test(emailInput.value)){
+          nameError.style.color='red';
+          nameError.innerText='Wrong Name';
+
+        passwordiError.style.color='red';
+        passwordiperseriteError.style.color='red';
+        emailError.style.color='red';
+        passwordiError.innerText='Wrong Password';
+        passwordiperseriteError.innerText='Wrong Password Again';
+        emailError.innerText='Wrong Email';
+        alert("Ju lutemi mbushni te dhenat me saktesi !");
+        return false;
+          }
         }
-        //duhet te jene te dhena te caktuara qe te funksionoj si duhet kjo forme    EMRI DUHET TE JETE: Ilir   MBIEMRI: Misini  Passwordi:passwordiABC12 RE-Passwordi:passwordiABC12  Emaili:iilirmisini4@gmail.com
-        else if(nameRegex.test(nameinput.value) && MbiemriRegex.test(mbiemriInput.value) && passwordRegex.test(password.value) && passwordRegex.test(passwordperseriteInput.value)
-        && EmailRegex.test(emailInput.value)) {
-        nameError.style.color='#26FF00';
-        MbiemriError.style.color='#26FF00';
-        passwordiError.style.color='#26FF00';
-        passwordiperseriteError.style.color='#26FF00';
-        emailError.style.color='#26FF00';
-        nameError.innerText='Success Name';
-        MbiemriError.innerText='Success Surname';
-        passwordiError.innerText='Success Password';
-        passwordiperseriteError.innerText='Re-Success Password';
-        emailError.innerText='Success Email';
-        alert("Ju keni shenuar te dhenat me sukses");
-        return;
+
+        if(passwordRegex.test(password.value) && passwordRegex.test(passwordperseriteInput.value)){  //shenim qe te jete register forma ne menyre profesionale e strukturar mire dy inputet e passwordave duhet te jene te shenuara per te llogaritur passwordi si i sakte
+          passwordiError.style.color='#58FF00';
+          passwordiError.innerText='Correct Password';
+          passwordiperseriteError.style.color='#58FF00';
+          passwordiperseriteError.innerText='Correct Password Again';
+          if(!nameRegex.test(nameinput.value)  && !MbiemriRegex.test(mbiemriInput.value) && !EmailRegex.test(emailInput.value)){
+          MbiemriError.style.color='red';
+          MbiemriError.innerText='Wrong Surname';
+          nameError.style.color='red';
+          nameError.innerText='Wrong Name';
+          emailError.style.color='red';
+         emailError.innerText='Wrong Email';
+        alert("Ju lutemi mbushni te dhenat me saktesi !");
+        return false;
+          }
         }
+
+
+        if(EmailRegex.test(emailInput.value)){  
+          emailError.style.color='#58FF00';
+          emailError.innerText='Correct Email';
+          if(!nameRegex.test(nameinput.value)  && !MbiemriRegex.test(mbiemriInput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value)){
+          MbiemriError.style.color='red';
+          MbiemriError.innerText='Wrong Surname';
+          nameError.style.color='red';
+          nameError.innerText='Wrong Name';
+          passwordiError.style.color='red';
+          passwordiError.innerText='Incorrect Password';
+          passwordiperseriteError.style.color='red';
+          passwordiperseriteError.innerText='Incorrect Password Again';
+        alert("Ju lutemi mbushni te dhenat me saktesi !");
+        return false;
+          }
+        }
+
+          
+          if(nameRegex.test(nameinput.value)  && MbiemriRegex.test(mbiemriInput.value) && passwordRegex.test(password.value) && passwordRegex.test(passwordperseriteInput.value) && EmailRegex.test(emailInput.value)){
+          MbiemriError.style.color='#58FF00';
+          MbiemriError.innerText='Correct Surname';
+          nameError.style.color='#58FF00';
+          nameError.innerText='Correct Name';
+          passwordiError.style.color='#58FF00';
+          passwordiError.innerText='Correct Password';
+          passwordiperseriteError.style.color='#58FF00';
+          passwordiperseriteError.innerText='Correct Password Again';
+          emailError.style.color='#58FF00';
+          emailError.innerText='Correct Email';
+        alert("Ju keni mbushur te dhenat me saktesi !!");
+        return true;
+          }
+        
+          if(!nameRegex.test(nameinput.value)  && !MbiemriRegex.test(mbiemriInput.value) && !passwordRegex.test(password.value) && !passwordRegex.test(passwordperseriteInput.value) && !EmailRegex.test(emailInput.value)){
+          MbiemriError.style.color='red';
+          MbiemriError.innerText='Incorrect Surname';
+          nameError.style.color='red';
+          nameError.innerText='Incorrect Name';
+          passwordiError.style.color='red';
+          passwordiError.innerText='Incorrect Password';
+          passwordiperseriteError.style.color='red';
+          passwordiperseriteError.innerText='Incorrect Password Again';
+          emailError.style.color='red';
+          emailError.innerText='Incorrect Email';
+        alert("Ju lutemi mbushni te dhenat me saktesi !!");
+        return false;
+          }
         }
         </script>
         

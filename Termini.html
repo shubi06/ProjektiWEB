@@ -76,14 +76,14 @@
 
         <div class="inputet">
             <div class="inputet1">
-            <label for="name">Emri</label>
-            <input id="emri" type="text">
-            <label id="nameerror2"></label>
+            <label for="namePaError">Emri</label>
+            <input id="emriInputT" type="text">
+            <label id="nameerrorR"></label>
         </div>
         <div class="inputet1">
-            <label for="surname">Mbiemri</label>
-            <input id="mbiemri" type="text">
-            <label id="mbiemrierror2"></label>
+            <label for="surnamePaError">Mbiemri</label>
+            <input id="mbiemriINput" type="text">
+            <label id="mbiemriErrorR"></label>
         </div>
         </div>
 
@@ -91,39 +91,599 @@
         <div class="inputet3">
         <div class="inputet1">
             <label for="telephone">Numri i telefonit</label>
-            <input id="tel" type="tel" value="">
-            <label id="Numbererror2"></label>
+            <input id="telInput" type="tel" value="">
+            <label id="NumberErroR2"></label>
         </div>
         <div class="inputet1">
-            <label for="username">Sherbimi</label> 
+            <label for="username" >Sherbimi</label> 
             
-            <select name="sherbimet" id="sherbimet">
-                <option value="">Kujdes Intenziv</option>
-                <option value="">Ndihma e parë</option>
-                <option value="">Medikamente</option>
-                <option value="">Konsulta Psikologjike</option>
-                <option value="">Stomatologji</option>
-                <option value="">Oftalmologji</option>
-                <option value="">ORL</option>
-                <option value="">Kardiologji</option>
+            <select name="sherbimet" id="sherbimetInput">
+                <option value="Kujdes Intenziv">Kujdes Intenziv</option>
+                <option value="Ndihma e parë">Ndihma e parë</option>
+                <option value="Medikamente">Medikamente</option>
+                <option value="Konsulta Psikologjike">Konsulta Psikologjike</option>
+                <option value="Stomatologji">Stomatologji</option>
+                <option value="Oftalmologji">Oftalmologji</option>
+                <option value="ORL">ORL</option>
+                <option value="Kardiologji">Kardiologji</option>
             </select>
-           
+            <label id="sherbimError" for="sherbimi101"></label> 
         </div>
         </div>
+
+
+        
+     
 
         <div class="inputet5">
         <div class="inputet1">
             <label for="username">Ora</label>
             
-            <input id="time" type="time">
+            <input id="timeInput" type="time">
+            <label id="erorrOra"for="Erorr"></label>
         </div>
         <div class="inputet1">
             <label for="username">Data</label> 
             <input id="data" type="date">
+            <label id="ErrorData" for="Erorr"></label>
         </div>
         </div>
-       <div class="butonicakto"> <button onclick='' > CAKTO </button></div>
+       <div class="butonicakto"> <input type="submit" onclick="return TERMINIvalidation()" value="cakto"> CAKTO </div>
     </form>
+
+<!--
+    Konsulta Psikologjike
+    09:25 PM   08:21 AM
+    12/07/2023
+ -->
+
+    
+
+    <script>
+
+        let NAmmeRegexx=/^[A-Z]\w[a-z]{2,10}/;
+        let SUrnameRegexx=/^[A-Z]{1}\w[a-z]{3,16}/;     
+        let NUmberRegexx=/[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}/;
+        let SHerbimiRegexx=/^[A-z]{1}\w+[ ]\w{12,30}/;          
+        let sherbimitjeterRegex=/^[A-z]{1}[a-z]{1,30}/;        
+      
+        
+    function TERMINIvalidation() {
+     var nAmeiNputi = document.getElementById('emriInputT'); 
+     var SUrnameiNputi = document.getElementById('mbiemriINput');
+      var NumberiNputi = document.getElementById('telInput');
+      var sHerbimiNputi = document.getElementById('sherbimetInput');
+      
+      var orAiNputi = document.getElementById('timeInput');
+    var orAiNputiERROR = document.getElementById('erorrOra');
+    var DAtaiNputi = document.getElementById('data');
+
+    var nAmeiNputiERROR = document.getElementById('nameerrorR');  
+     var SUrnameiNputiERROR = document.getElementById('mbiemriErrorR');
+      var NumberiNputiERROR = document.getElementById('NumberErroR2');
+      var sHerbimiNputiERROR = document.getElementById('sherbimError');
+      var DAtaiNputiERROR = document.getElementById('ErrorData');
+  
+
+    nAmeiNputiERROR.innerText = '';
+    SUrnameiNputiERROR.innerText='';
+     NumberiNputiERROR.innerText='';
+     sHerbimiNputiERROR.innerText='';
+     orAiNputiERROR.innerText='';
+     DAtaiNputiERROR.innerText='';
+
+if (NAmmeRegexx.test(nAmeiNputi.value)){
+    nAmeiNputiERROR.style.color = '#58FF00';
+    nAmeiNputiERROR.innerText = 'Correct Name';
+    if (SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = '#58FF00';
+    SUrnameiNputiERROR.innerText = 'Correct Surname';
+        }
+if (NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='#58FF00';
+    NumberiNputiERROR.innerText = 'Correct Number';  
+}
+if(SHerbimiRegexx.test(sHerbimiNputi.value) || sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='#58FF00';
+    sHerbimiNputiERROR.innerText='Correct Service';
+}
+
+if (orAiNputi.value!=='') {
+    orAiNputiERROR.style.color = '#58FF00';
+    orAiNputiERROR.innerText = 'Correct Clock';
+}
+
+
+if (DAtaiNputi.value !=='') {
+    DAtaiNputiERROR.style.color = '#58FF00';
+    DAtaiNputiERROR.innerText = 'Correct DATE';
+    alert("Emri Mbiemri Numri Telefonit Sherbimi Ora Data jane mire !!");
+    return true;
+}
+}
+
+if (NAmmeRegexx.test(nAmeiNputi.value)){
+    nAmeiNputiERROR.style.color = '#58FF00';
+    nAmeiNputiERROR.innerText = 'Correct Name';
+    if (!SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = 'red';
+    SUrnameiNputiERROR.innerText = 'Wrong Surname';
+        }
+if (!NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='red';
+    NumberiNputiERROR.innerText = 'Wrong Number';  
+}
+if (!SHerbimiRegexx.test(sHerbimiNputi.value)) {
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+}
+
+if (!sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+
+}
+
+if (orAiNputi.value=='') {
+    orAiNputiERROR.style.color = 'red';
+    orAiNputiERROR.innerText = 'Wrong Clock';
+}
+
+
+if (DAtaiNputi.value=='') {
+    DAtaiNputiERROR.style.color = 'red';
+    DAtaiNputiERROR.innerText = 'Wrong DATE';
+    alert("Ju lutemi rishikoni te dhenat  !!");
+    return false;
+}
+}
+
+
+if (SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = '#58FF00';
+    SUrnameiNputiERROR.innerText = 'Correct Surname';
+    if (!NAmmeRegexx.test(nAmeiNputi.value)){
+        nAmeiNputiERROR.style.color = 'red';
+    nAmeiNputiERROR.innerText = 'Wrong Name';
+        }
+if (!NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='red';
+    NumberiNputiERROR.innerText = 'Wrong Number';  
+}
+if (!SHerbimiRegexx.test(sHerbimiNputi.value)) {
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+}
+
+if (!sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+
+}
+
+if (orAiNputi.value=='') {
+    orAiNputiERROR.style.color = 'red';
+    orAiNputiERROR.innerText = 'Wrong Clock';
+}
+
+
+if (DAtaiNputi.value=='') {
+    DAtaiNputiERROR.style.color = 'red';
+    DAtaiNputiERROR.innerText = 'Wrong DATE';
+    alert("Ju lutemi rishikoni te dhenat  !!");
+    return false;
+}
+}
+
+
+
+if (NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='#58FF00';
+    NumberiNputiERROR.innerText = 'Correct Number'; 
+    if (!NAmmeRegexx.test(nAmeiNputi.value)){
+        nAmeiNputiERROR.style.color = 'red';
+    nAmeiNputiERROR.innerText = 'Wrong Name';
+        }
+if (!SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = 'red';
+    SUrnameiNputiERROR.innerText = 'Wrong Surname';
+}
+if (!SHerbimiRegexx.test(sHerbimiNputi.value)) {
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+}
+
+if (!sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+
+}
+
+if (orAiNputi.value=='') {
+    orAiNputiERROR.style.color = 'red';
+    orAiNputiERROR.innerText = 'Wrong Clock';
+}
+
+
+if (DAtaiNputi.value=='') {
+    DAtaiNputiERROR.style.color = 'red';
+    DAtaiNputiERROR.innerText = 'Wrong Date';
+    alert("Ju lutemi rishikoni te dhenat  !!");
+    return false;
+}
+}
+
+
+if (SHerbimiRegexx.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='#58FF00';
+    sHerbimiNputiERROR.innerText='Correct Service';
+    if(sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='#58FF00';
+    sHerbimiNputiERROR.innerText='Correct Service';
+    }
+
+    if (!NAmmeRegexx.test(nAmeiNputi.value)){
+        nAmeiNputiERROR.style.color = 'red';
+    nAmeiNputiERROR.innerText = 'Wrong Name';
+        }
+if (!SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = 'red';
+    SUrnameiNputiERROR.innerText = 'Wrong Surname';
+}
+if(!NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='red';
+    NumberiNputiERROR.innerText = 'Wrong Number'; 
+}
+
+if (orAiNputi.value=='') {
+    orAiNputiERROR.style.color = 'red';
+    orAiNputiERROR.innerText = 'Wrong Clock';
+}
+
+
+if (DAtaiNputi.value=='') {
+    DAtaiNputiERROR.style.color = 'red';
+    DAtaiNputiERROR.innerText = 'Wrong Date';
+    alert("Ju lutemi rishikoni te dhenat !!");
+    return false;
+}
+}
+
+
+
+if (orAiNputi.value!==''){ 
+    orAiNputiERROR.style.color = '#58FF00';
+    orAiNputiERROR.innerText = 'Correct Clock';
+    if (!NAmmeRegexx.test(nAmeiNputi.value)){
+    nAmeiNputiERROR.style.color = 'red';
+    nAmeiNputiERROR.innerText = 'Wrong Name';
+        }
+if (!SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = 'red';
+    SUrnameiNputiERROR.innerText = 'Wrong Surname';
+}
+if(!NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='red';
+    NumberiNputiERROR.innerText = 'Wrong Number'; 
+}
+
+if (!SHerbimiRegexx.test(sHerbimiNputi.value)) {
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+}
+
+if (!sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+
+}
+
+
+if (DAtaiNputi.value=='') {
+    DAtaiNputiERROR.style.color = 'red';
+    DAtaiNputiERROR.innerText = 'Wrong Date';
+    alert("Ju lutemi rishikoni te dhenat  !!");
+    return false;
+}
+}
+
+
+if (DAtaiNputi.value!==''){ //DAtaiNputi.value==''
+    DAtaiNputiERROR.style.color = '#58FF00';
+    DAtaiNputiERROR.innerText = 'Correct Date';
+if (!NAmmeRegexx.test(nAmeiNputi.value)){
+    nAmeiNputiERROR.style.color = 'red';
+    nAmeiNputiERROR.innerText = 'Wrong Name';
+        }
+if (!SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = 'red';
+    SUrnameiNputiERROR.innerText = 'Wrong Surname';
+}
+if(!NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='red';
+    NumberiNputiERROR.innerText = 'Wrong Number'; 
+}
+
+if (!SHerbimiRegexx.test(sHerbimiNputi.value)) {
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+}
+
+if (!sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+
+}
+
+if (orAiNputi.value=='') {
+    orAiNputiERROR.style.color = 'red';
+    orAiNputiERROR.innerText = 'Wrong Clock';
+    alert("Ju lutemi rishikoni te dhenat  !!");
+    return false;
+}
+}
+
+
+if (DAtaiNputi.value==''){ 
+    DAtaiNputiERROR.style.color = 'red';
+    DAtaiNputiERROR.innerText = 'Wrong Date';
+if (!NAmmeRegexx.test(nAmeiNputi.value)){
+    nAmeiNputiERROR.style.color = 'red';
+    nAmeiNputiERROR.innerText = 'Wrong Name';
+        }
+if (!SUrnameRegexx.test(SUrnameiNputi.value)){
+    SUrnameiNputiERROR.style.color = 'red';
+    SUrnameiNputiERROR.innerText = 'Wrong Surname';
+}
+if(!NUmberRegexx.test(NumberiNputi.value)){
+    NumberiNputiERROR.style.color='red';
+    NumberiNputiERROR.innerText = 'Wrong Number'; 
+}
+
+if (!SHerbimiRegexx.test(sHerbimiNputi.value) || !sherbimitjeterRegex.test(sHerbimiNputi.value)) {
+    sHerbimiNputiERROR.style.color='red';
+    sHerbimiNputiERROR.innerText='Wrong Service';
+}
+
+if (orAiNputi.value=='') {
+    orAiNputiERROR.style.color = 'red';
+    orAiNputiERROR.innerText = 'Wrong Clock';
+    alert("Ju lutemi rishikoni te dhenat te githa !!");
+    return false;
+}
+}
+
+
+
+}
+
+
+
+
+
+    
+    // if(!SUrnameRegexx.test(SUrnameiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) &&  !OrARegexx.test(orAiNputi.value) && !SHerbimiRegexx.test(sHerbimiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //     SUrnameiNputiERROR.style.color='red';
+    //           NumberiNputiERROR.style.color='red';
+    //           sHerbimiNputiERROR.style.color='red';
+    //           orAiNputiERROR.style.color='red';
+    //          DAtaiNputiERROR.style.color='red';
+    //          SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          NumberiNputiERROR.innerText='Wrong Number';
+    //           sHerbimiNputiERROR.innerText='Wrong Service';
+    //           orAiNputiERROR.innerText='Wrong Clock';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //           alert("Ju lutemi shkruani mire te dhenat !!");
+
+
+
+    
+
+
+    // var nAmeiNputi = document.getElementById('emriInputT');
+    // var SUrnameiNputi = document.getElementById('mbiemriINput');
+    // var NumberiNputi = document.getElementById('telInput');
+    // var sHerbimiNputi = document.getElementById('sherbimetInput');
+    // var orAiNputi = document.getElementById('timeInput');
+    // var DAtaiNputi = document.getElementById('data');
+
+    // var nAmeiNputiERROR = document.getElementById('nameerrorR');
+    // var SUrnameiNputiERROR = document.getElementById('mbiemriErrorR');
+    // var NumberiNputiERROR = document.getElementById('NumberErroR2');
+    // var sHerbimiNputiERROR = document.getElementById('sherbimError');
+    // var orAiNputiERROR = document.getElementById('erorrOra');
+    // var DAtaiNputiERROR = document.getElementById('ErrorData');
+
+    // nAmeiNputiERROR.innerText ='';
+    // SUrnameiNputiERROR.innerText ='';
+    // NumberiNputiERROR.innerText ='';
+    // sHerbimiNputiERROR.innerText ='';
+    // orAiNputiERROR.innerText ='';
+    // DAtaiNputiERROR.innerText ='';
+
+    //     if(NAmmeRegexx.test(nAmeiNputi.value)){
+    //         nAmeiNputiERROR.style.color='green';
+    //         nAmeiNputiERROR.innerText='Correct Name';
+    //         alert("true");
+    //         return true;
+    //     }
+    //     else{
+    //         nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='wrong Name';
+    //         alert("false");
+    //         return false;
+    //     }
+    // }
+
+
+    
+
+
+    // var nAmeiNputi = document.getElementById('emriInputT');
+    // var nAmeiNputiERROR = document.getElementById('nameerrorR');
+
+
+
+
+
+
+
+
+
+    //         if(!SUrnameRegexx.test(SUrnameiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) &&  !OrARegexx.test(orAiNputi.value) && !SHerbimiRegexx.test(sHerbimiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //          SUrnameiNputiERROR.style.color='red';
+    //          NumberiNputiERROR.style.color='red';
+    //          sHerbimiNputiERROR.style.color='red';
+    //          orAiNputiERROR.style.color='red';
+    //          DAtaiNputiERROR.style.color='red';
+    //          SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          NumberiNputiERROR.innerText='Wrong Number';
+    //          sHerbimiNputiERROR.innerText='Wrong Service';
+    //          orAiNputiERROR.innerText='Wrong Clock';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //         }
+    //     }
+
+    //         if(SUrnameRegexx.test(SUrnameiNputi.value)){
+    //             SUrnameiNputiERROR.style.color='green';
+    //             SUrnameiNputiERROR.innerText='Correct Surname';
+    //             if(!NAmmeRegexx.test(nAmeiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) &&  !OrARegexx.test(orAiNputi.value) && !SHerbimiRegexx.test(sHerbimiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //          nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='Wrong Name';
+    //         NumberiNputiERROR.style.color='red';
+    //          sHerbimiNputiERROR.style.color='red';
+    //          orAiNputiERROR.style.color='red';
+    //          DAtaiNputiERROR.style.color='red';
+    //          NumberiNputiERROR.innerText='Wrong Number';
+    //          sHerbimiNputiERROR.innerText='Wrong Service';
+    //          orAiNputiERROR.innerText='Wrong Clock';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //             }
+    //         }
+
+    //         if(NUmberRegexx.test(NumberiNputi.value)){
+    //             NumberiNputiERROR.style.color='green';
+    //             NumberiNputiERROR.innerText='Correct Number';
+    //             if(!NAmmeRegexx.test(nAmeiNputi.value) && !SUrnameRegexx.test(SUrnameiNputi.value) &&  !OrARegexx.test(orAiNputi.value) && !SHerbimiRegexx.test(sHerbimiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //          nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='Wrong Name';
+    //          sHerbimiNputiERROR.style.color='red';
+    //          orAiNputiERROR.style.color='red';
+    //          DAtaiNputiERROR.style.color='red';
+    //          SUrnameiNputiERROR.style.color='red';
+    //         SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          sHerbimiNputiERROR.innerText='Wrong Service';
+    //          orAiNputiERROR.innerText='Wrong Clock';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //             }
+    //         }
+               
+    //         if(SHerbimiRegexx.test(sHerbimiNputi.value)){
+    //             sHerbimiNputiERROR.style.color='green';
+    //             sHerbimiNputiERROR.innerText='Correct Service';
+    //             if(!NAmmeRegexx.test(nAmeiNputi.value) && !SUrnameRegexx.test(SUrnameiNputi.value) &&  !OrARegexx.test(orAiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //          nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='Wrong Name';
+    //          orAiNputiERROR.style.color='red';
+    //          DAtaiNputiERROR.style.color='red';
+    //          SUrnameiNputiERROR.style.color='red';
+    //          NumberiNputiERROR.style.color='red';
+    //         NumberiNputiERROR.innerText='Wrong Number';
+    //         SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          orAiNputiERROR.innerText='Wrong Clock';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //             }
+    //         }
+
+      
+    //         if(OrARegexx.test(orAiNputi.value)){
+    //             orAiNputiERROR.style.color='green';
+    //             orAiNputiERROR.innerText='Correct Clock';
+    //             if(!NAmmeRegexx.test(nAmeiNputi.value) && !SUrnameRegexx.test(SUrnameiNputi.value) &&  !SHerbimiRegexx.test(sHerbimiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //          nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='Wrong Name';
+    //          DAtaiNputiERROR.style.color='red';
+    //          SUrnameiNputiERROR.style.color='red';
+    //          NumberiNputiERROR.style.color='red';
+    //          sHerbimiNputiERROR.style.color='red';
+    //         sHerbimiNputiERROR.innerText='Wrong Service';
+    //         NumberiNputiERROR.innerText='Wrong Number';
+    //         SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //             }
+    //         }
+            
+
+    //         if(DAtaRegexx.test(DAtaiNputi.value)){
+    //             DAtaiNputiERROR.style.color='green';
+    //             DAtaiNputiERROR.innerText='Correct Data';
+    //             if(!NAmmeRegexx.test(nAmeiNputi.value) && !SUrnameRegexx.test(SUrnameiNputi.value) &&  !SHerbimiRegexx.test(sHerbimiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) && !OrARegexx.test(orAiNputi.value)){
+    //          nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='Wrong Name';
+    //          SUrnameiNputiERROR.style.color='red';
+    //          NumberiNputiERROR.style.color='red';
+    //          sHerbimiNputiERROR.style.color='red';
+    //          orAiNputiERROR.style.color='red';
+    //         orAiNputiERROR.innerText='Wrong Clock';
+    //         sHerbimiNputiERROR.innerText='Wrong Service';
+    //         NumberiNputiERROR.innerText='Wrong Number';
+    //         SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //             }
+    //         }
+
+
+    //             if(DAtaRegexx.test(DAtaiNputi.value) && NAmmeRegexx.test(nAmeiNputi.value) && SUrnameRegexx.test(SUrnameiNputi.value) &&  SHerbimiRegexx.test(sHerbimiNputi.value) && NUmberRegexx.test(NumberiNputi.value) && OrARegexx.test(orAiNputi.value)){
+    //          nAmeiNputiERROR.style.color='green';
+    //         nAmeiNputiERROR.innerText='Correct Name';
+    //          SUrnameiNputiERROR.style.color='green';
+    //          NumberiNputiERROR.style.color='green';
+    //          sHerbimiNputiERROR.style.color='green';
+    //          orAiNputiERROR.style.color='green';
+    //          DAtaiNputiERROR.style.color='green';
+    //             DAtaiNputiERROR.innerText='Correct Data';
+    //         orAiNputiERROR.innerText='Correct Clock';
+    //         sHerbimiNputiERROR.innerText='Correct Service';
+    //         NumberiNputiERROR.innerText='Correct Number';
+    //         SUrnameiNputiERROR.innerText='Correct Surname';
+    //          alert("Ju keni shkruajtur mire te dhenat !!");
+    //                 return true;
+    //             }
+            
+    //          if(!NAmmeRegexx.test(nAmeiNputi.value) && !SUrnameRegexx.test(SUrnameiNputi.value) && !NUmberRegexx.test(NumberiNputi.value) &&  !OrARegexx.test(orAiNputi.value) && !SHerbimiRegexx.test(sHerbimiNputi.value) && !DAtaRegexx.test(DAtaiNputi.value)){
+    //         nAmeiNputiERROR.style.color='red';
+    //         nAmeiNputiERROR.innerText='Wrong Name';
+    //         SUrnameiNputiERROR.style.color='red';
+    //          NumberiNputiERROR.style.color='red';
+    //          sHerbimiNputiERROR.style.color='red';
+    //          orAiNputiERROR.style.color='red';
+    //          DAtaiNputiERROR.style.color='red';
+
+    //          SUrnameiNputiERROR.innerText='Wrong Surname';
+    //          NumberiNputiERROR.innerText='Wrong Number';
+    //          sHerbimiNputiERROR.innerText='Wrong Service';
+    //          orAiNputiERROR.innerText='Wrong Clock';
+    //          DAtaiNputiERROR.innerText='Wrong Data';
+    //          alert("Ju lutemi shkruani mire te dhenat !!");
+    //                 return false;
+    //     }
+    // }
+    
+    //
+     </script> 
+
+
 
 
 

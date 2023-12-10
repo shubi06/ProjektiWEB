@@ -98,7 +98,8 @@
             <label for="username" >Sherbimi</label> 
             
             <select name="sherbimet" id="sherbimetInput">
-                <option value="Kujdes Intenziv">Kujdes Intenziv</option>
+                <option value="">Zgjedh Sherbimin !</option>
+                <option value="Kujdesi Intenziv">Kujdesi Intenziv</option>
                 <option value="Ndihma e parë">Ndihma e parë</option>
                 <option value="Medikamente">Medikamente</option>
                 <option value="Konsulta Psikologjike">Konsulta Psikologjike</option>
@@ -140,8 +141,8 @@
         let NAmmeRegexx=/^[A-Z]\w[a-z]{2,10}/;
         let SUrnameRegexx=/^[A-Z]{1}\w[a-z]{3,16}/;     
         let NUmberRegexx=/[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}[-+]{1}[0-9]{3}/;
-        let SHerbimiRegexx=/^[A-z]{1}\w+[ ]\w{12,30}/;          
-        let sherbimitjeterRegex=/^[A-z]{1}[a-z]{1,30}/;        
+        let SHerbimiRegexx=/^[A-Z]{1,3}\w+[ ]\w{1,30}/;          
+        let sherbimitjeterRegex=/^[A-Z]{1,3}[a-zA-Z]{1,30}/;        
       
         
     function TERMINIvalidation() {
@@ -309,15 +310,13 @@ if (DAtaiNputi.value=='') {
 }
 }
 
-
-if (SHerbimiRegexx.test(sHerbimiNputi.value)){
+if ((SHerbimiRegexx.test(sHerbimiNputi.value) || sherbimitjeterRegex.test(sHerbimiNputi.value))){
     sHerbimiNputiERROR.style.color='#58FF00';
     sHerbimiNputiERROR.innerText='Correct Service';
-    if(sherbimitjeterRegex.test(sHerbimiNputi.value)){
-    sHerbimiNputiERROR.style.color='#58FF00';
-    sHerbimiNputiERROR.innerText='Correct Service';
-    }
-
+    // if(sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    // sHerbimiNputiERROR.style.color='#58FF00';
+    // sHerbimiNputiERROR.innerText='Correct Service';
+    // }
     if (!NAmmeRegexx.test(nAmeiNputi.value)){
         nAmeiNputiERROR.style.color = 'red';
     nAmeiNputiERROR.innerText = 'Wrong Name';
@@ -373,7 +372,6 @@ if (!sherbimitjeterRegex.test(sHerbimiNputi.value)){
     sHerbimiNputiERROR.innerText='Wrong Service';
 
 }
-
 
 if (DAtaiNputi.value=='') {
     DAtaiNputiERROR.style.color = 'red';
@@ -448,9 +446,6 @@ if (orAiNputi.value=='') {
     return false;
 }
 }
-
-
-
 }
 
 

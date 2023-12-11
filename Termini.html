@@ -180,10 +180,16 @@ if (NUmberRegexx.test(NumberiNputi.value)){
     NumberiNputiERROR.style.color='#58FF00';
     NumberiNputiERROR.innerText = 'Correct Number';  
 }
-if(SHerbimiRegexx.test(sHerbimiNputi.value) || sherbimitjeterRegex.test(sHerbimiNputi.value)){
+if(SHerbimiRegexx.test(sHerbimiNputi.value)){
     sHerbimiNputiERROR.style.color='#58FF00';
     sHerbimiNputiERROR.innerText='Correct Service';
 }
+
+if(sherbimitjeterRegex.test(sHerbimiNputi.value)){
+    sHerbimiNputiERROR.style.color='#58FF00';
+    sHerbimiNputiERROR.innerText='Correct Service';
+}
+
 
 if (orAiNputi.value!=='') {
     orAiNputiERROR.style.color = '#58FF00';

@@ -1,16 +1,20 @@
 <?php
-include('admin_panel/Product.php');
+
+session_start();
+// include ('middleware/adminMiddleware.php');
 
 
-include('includes/connect.php');
+include('./CRUDS/mjeku.php');
 
-$select_query = "SELECT * FROM `products` ORDER BY emri";
-$result_query = mysqli_query($connect, $select_query);
 
-$desiredCategoryId = 2;
+include ('./database/dbconnection.php');
+
+$select_query = "SELECT * FROM `mjeku` ORDER BY titulli";
+$result_query = mysqli_query($conn, $select_query); 
+
+$desiredCategoryId ='';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,35 +28,56 @@ $desiredCategoryId = 2;
 </head>
 <body>
 
-    <header class="header" >
+    
+<header class="header" >
         <div class="navigimi">
         <div class="nav-start">
        
     
             <ul>
 
-                <li>   <a href="index.html"><img  style="width: 70px; height: 60px;" src="logo-bardh.png" alt=""></a> </li>
-                <li>   <a href="index.html">Grieta</a> </li> 
-                <li>   <a href="sherbimet.html" target=”_blank” >Shërbimet</a> </li>  
-                <li>   <a href="Stafiyne.html">Stafi</a></li>  
-                <li>   <a href="about-us.html" target=”_blank” >Rreth nesh</a></li>  
-                <li>   <a href="book-an-appointment.html" target="_blank">Kontakti</a></li> 
-                
+               <li>   <a href="index.php"><img  style="width: 70px; height: 60px;" src="logo-bardh.png" alt=""></a> </li>
+               <li>   <a href="index.php">Grieta</a> </li> 
+               <li>   <a href="sherbimet.php" target=”_blank” >Shërbimet</a> </li>  
+               <li>   <a href="Stafiyne.php" target="_blank">Stafi</a></li>  
+               <li>   <a href="about-us.php" target=”_blank” >Rreth nesh</a></li>  
+               <li>   <a href="termini.php" target="_blank">Termini</a></li> 
+               
+            
+             
+
              </ul>
 
 
         </div>
+        <?php 
+            if(isset($_SESSION['auth'])) 
+            {   
+        ?>
+       
+         <ul>
+         <li> <a href="logout.php" > <button class="regj"> DIL</button></a> </li>
+         </ul>
         
-        <div class="nav-end">
-           <ul>
-        <li> <a href="login.html"> <button class="regj"> Kyqu</button></a> </li>
-        <li> <a href="register.html"> <button class="regj"> Regjistrohu</button></a> </li>
-        </ul>
-        </div>
-        </div>
+        <?php 
+            }
+            else {
+                ?>
+
+                <div class="nav-end">
+                <ul>
+             <li> <a href="login.php" target=”_blank”> <button class="regj"> Kyqu</button></a> </li>
+             <li> <a href="register.php" target=”_blank”> <button class="regj"> Regjistrohu</button></a> </li>
+             </ul>
+             </div>
+             <?php 
+            }
+            ?>
+         
+            
+             </div>
 
     </header>
-
     <section>
 
       
@@ -63,7 +88,7 @@ $desiredCategoryId = 2;
             
 
             <div class="rubrikat">
-                <div class="card1">
+                <!-- <div class="card1">
                     <div class="image1"> <img src="DOKTORI1.png" alt=""></div>
                      <div class="content2">
                         
@@ -81,31 +106,22 @@ $desiredCategoryId = 2;
                          KARDIOLOG
                         
                        </a>
+      
                      </div>
+                   </div> -->
+       
+                  <div class="card1">
+                  <?php
+        while ($row = mysqli_fetch_assoc($result_query)) {
+          $mjekuObj = new Mjeku($row);
+            
+            $mjekuObj->generateProductCard($desiredCategoryId); 
+        }
+        ?>
                    </div>
+            
             
                    <!-- <div class="card1">
-                    <div class="image5"> <img src="DOKTORI2.png" alt=""></div>
-                     <div class="content2">
-                        
-                       <a href="#">
-                         <span class="title1">
-                           Dr. Anthony Taylor
-                         </span>
-                       </a>
-                   
-                       <p class="desc">
-                        5 vjet eksperiencë pune.
-                       </p>
-                   
-                       <a class="action" href="#">
-                         FARMACIST
-                        
-                       </a>
-                     </div>
-                   </div>
-            
-                   <div class="card1">
                     <div class="image1"> <img src="DOKTORI3.png" alt=""></div>
                      <div class="content2">
                         
@@ -229,7 +245,7 @@ $desiredCategoryId = 2;
                         
                        </a>
                      </div>
-                   </div> -->
+                   </div> --> 
 
                    <!-- <div class="card1">
                     <div class="image1"> <img src="DOKTORI9.png" alt=""></div>

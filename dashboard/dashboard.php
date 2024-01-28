@@ -132,11 +132,11 @@
 
     <div class=boxat>
  
-    <a href="../CRUDS/index.php" target=”_blank”><button class="button">CRUD MJEKU</button></a>
-    <a href="../CRUDS/indexSh.php" target=”_blank”> <button class="button">CRUD Sherbimin</button>
-    <a href="../CRUDS/userIndex.php" target=”_blank”>  <button class="button">CRUD Userat</button>
-    <button class="button">Mesazhet nga Kontakti</button>
-    <a href="../CRUDS/terminiDashboard.php" target=”_blank”> <button class="button">Terminet e caktuara</button>
+    <a href="../CRUDSOOP/indexMjeku.php" target=”_blank”><button class="button">CRUD MJEKU</button></a>
+    <a href="../CRUDSOOP/indexSherbimet.php" target=”_blank”> <button class="button">CRUD Sherbimin</button>
+    <a href="../CRUDSOOP/indexUsers.php" target=”_blank”>  <button class="button">CRUD Userat</button>
+    <a href="../CRUDSOOP/mesazhetDashboard.php" target=”_blank”><button class="button">Mesazhet nga Kontakti</button>
+    <a href="../CRUDSOOP/terminiDashboard.php" target=”_blank”> <button class="button">Terminet e caktuara</button>
 
 
     </div>

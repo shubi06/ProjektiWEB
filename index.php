@@ -13,7 +13,8 @@ session_start();
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="lidhja_me_css.css">
+    <link rel="stylesheet" href="lidhja_me_cssSH.css">
+   
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -36,8 +37,9 @@ session_start();
                <li>   <a href="index.php">Grieta</a> </li> 
                <li>   <a href="sherbimet.php" target=”_blank” >Shërbimet</a> </li>  
                <li>   <a href="Stafiyne.php" target="_blank">Stafi</a></li>  
-               <li>   <a href="about-us.php" target=”_blank” >Rreth nesh</a></li>  
                <li>   <a href="termini.php" target="_blank">Termini</a></li> 
+               <li>   <a href="about-us.php" target=”_blank” >Rreth nesh</a></li>  
+               <li>   <a href="book-an-appointment.php" target=”_blank” >Kontakti</a></li>  
                
             
              
@@ -177,175 +179,178 @@ session_start();
 
 
 
-<section class="medical-l" style="padding-bottom: 10px; margin-right: 0; margin-left: 0; padding-left: 0; padding-right: 0;">
-
-<div class="feedback" >
-  <span class="boldi" style="padding-top: 30px;">Clients Feedback</span>
-</div>
-
-
-<div class="totali999" style="margin-top: 70px;"> 
-  
-  <img src="th1.png" class="klasathonjezat" alt="" style="width: 350px; height: 350px; float: right; margin-top: -110px; margin-right: 25px;">    
-
-  <div class="pershkrimi1">
-    <div><img  src="foto3.png" alt="foto-e-klientes" style="margin-top: -130px; margin-right: 50%; float: right;"></div>
-      <p class="allna" style="padding-left: 140px; padding-top: 20px; font-size: 1.5em;color: #008080;">Miss Allna<p>
-
-      <p class="animate__animated animate__bounce animate__delay-1s" style="padding-left: 20px; padding-right: 20px; margin-top: 40px;">This is easily the best concierge medical practice in the jupiter/
-          plam beach area | was a number of a different concierge
-          practice before and that doctor didnt even go to the hosiptal to
-          see me when | had an emergency.That,s definitely not the case
-          now, Dr.seema is always on top of everything and provide
-          excellent care in or out of the hspital | Thank you Dr.!
-          </p>
-      </div>
+<section class="medical-l">
     
-  </div>
+        <div class="Teksti">
+            <p><span>KLIENTËT</span> TANË</p>
+        </div>
 
-  <div class="totali2" style="width: 500px;">
-      <div class="pershkrimi2">
-        <div><img src="foto4.png" alt="foto-e-klientes" style="margin-top: -110px; margin-left: 30%;  width: 200px; background-size:contain; height: 150px;"></div>
-          <!-- <p class="Sir" style="padding-left: 230px; font-size: 1.5em;color: green; margin-top: -3px; ">Sir Mohsin<p> -->
-            <p class="Sir" style="padding-left: 220px; font-size: 1.5em;color: #008080; margin-top: -3px; ">Sir Mohsin<p></p>
+ <div class="thonjezat1">
+    <img src="th1.png" style="height: 200px; width: 200px;" alt="">
+ </div>
+
+ <div class="Klienti1">
+   <div class="boxxxi">
+    <div class="fotoKl1"><img src="klient2.png" style="height: 200px; width: 200px;" alt=""></div>
+    <div class="emridhembiemri"><p>Sam Mohins</p> </div>
+    <div class="pershkrimi"><p>Do të doja të shprehë falënderimin tim për kujdesin dhe shërbimet
+                                e ofruara nga stafi juaj gjatë vizitës sime.
+                                Fillimisht, më bëri përshtypje pozitivja atmosfera e pastër 
+                                dhe tërësisht të pajisur me pajisje të fundit mjekësore. 
+                                Përdorimi i teknologjisë së fundit në mjekësi është një avantazh i madh
+                                dhe ndihmoi në një diagnozë dhe trajtim më të saktë.
+                                
+        
+      </p> </div>
+
+</div>
+ </div>
+
+ <div class="Klienti2">
+    <div class="boxxxi">
+     <div class="fotoKl2"><img src="klient3.png" style="height: 200px; width: 200px;" alt=""></div>
+     <div class="emridhembiemri"><p>Miss Allna</p> </div>
+     <div class="pershkrimi"><p>Do të doja të shprehë falënderimin tim për kujdesin dhe shërbimet
+                                 e ofruara nga stafi juaj gjatë vizitës sime.
+                                 Fillimisht, më bëri përshtypje pozitivja atmosfera e pastër 
+                                 dhe tërësisht të pajisur me pajisje të fundit mjekësore. 
+                                 Përdorimi i teknologjisë së fundit në mjekësi është një avantazh i madh
+                                 dhe ndihmoi në një diagnozë dhe trajtim më të saktë.
+                                 
          
-          
-          <p class="animate__animated animate__bounce animation-duration: 2s;" style="padding-left: 25px; padding-right: 20px; margin-top: 40px;">This is easily the best concierge medical practice in the jupiter/
-              Dr.Shtern was recommended by a friend , and having just gone to
-              see her myself, | can see why everyone reves about her. She is the
-              real deal | always get nervous when seeing a doctor and she
-              made me feel very comfortable right from the start. she was very
-              pleaseant and professional
-              </p>
-          </div>
-      </div>
-      <img src="th2.png" alt="" style="width: 350px; height: 350px; margin-top: -240px; margin-left: 30px;">
+       </p> </div>
  
+ </div>
+  </div>
+  <div class="thonjezat2">
+    <img src="th2.png" style="height: 200px; width: 200px;" alt="">
+ </div>
 
-      <div class="container999">
-          <div class="box999" id="id999">
-          <div class="kryesori-inside-1">
-          <div class="mbrenda-1shit"  id="inside-1"><img clas="imazhi1" style=" width: 300px; border-radius: 16px;" src="foto7.png" alt="foto  e spitalit"></div>
-          <div class="mbrenda-1shit"  id="inside-2"><img clas="imazhi2"style=" width: 300px; border-radius: 16px;" src="foto5.png" alt="foto  e spitalit"></div> 
-          <div class="mbrenda-1shit"  id="inside-3"><img clas="imazhi3"style=" width: 300px; border-radius: 16px;" src="foto6.png" alt="foto  e spitalit"></div>
-          <div class="mbrenda-1shit"  id="inside-4"><img clas="imazhi3"style=" width: 300px; border-radius: 16px;" src="foto8.png" alt="foto  e spitalit"></div>
-          </div>
-          </div>
-          <div class="box999" id="id2">
-              <h1 class="provide"  style="color:#008080; font-size: 30px; margin-top: 80px;">About Us</h1>
-              <div class="provide"id="c2">
-                  <br>
-              <p class="animate__animated animate__bounce   animation: bounce; animation-duration: 4s" id="tektsti999" style="font-weight: bold";>We provide the best medical Care Treatment for your health</p>
-              <p class="animate__animated animate__bounce animate__repeat-2" id="tektsti999" style="margin-top: 30px;">We provide the special steps and advice of health care treatment and high level of best technology involve is the our hospital.</p>
-              </div>
-          
-                  <div class="provide"id="c3" style="font-weight: 400px;">
-                          <ul><li>&#10132; Top special Doctors</li></ul>
-                          <ul><li>&#10132;Your Helath is our Priority</li></ul>      
-                          <ul><li>&#10132;Best Quality Treatment you get</li></ul>
-                          <ul><li>&#10132;Online Medical Delivery Service</li></ul>
-                          <ul><li>&#10132; 24/7 Hours Call Responing System</li></ul>
-                          <ul><li>&#10132; Provide All Health Treatment Under One Roof</li></ul>  
-                  </div>
-          
-          </div>
-          </div>
-          
 
-<h1 class="titulli" style="padding-left: 670px; font-size: 50px;  margin-bottom: 40px; margin-top: -40px;  color: #008080;">Kontakti</h1>
 
-<div class="kryesori111">
-  <div class="boxi111">
-  <div style="padding-top: 20px;">
-    <div class="mrenda-phone1" style="padding-top: 40px;">
-      <a href="about-us.html" target="_blank">
-    <img src="tel.png" style="width: 140px; height:135px; margin-left: 90px; margin-top: -15px;" alt="tel-logo">
-  </a>
-    <div style="margin-left: 25px;">
-      <a href="about-us.html" target="_blank" style="color: black;">
-    <p style="margin-left: 40px; width: 100px; margin-left: 110px; margin-top: 2px;"><strong>Phone</strong></p>
-    </a>
-    <div clas="tt" style="padding-left: 105px; margin-top: 2px; ">
-    <ul><li><strong>0111111</strong></li></ul>
-  </div>
-  </div>
-  </div>
-  </div>
-  
-  </div>
-  <div class="boxi111">
-  <div style="padding-top: 20px;">
-    <div class="mrenda-message1" style="padding-top: 40px;">
-      <a href="book-an-appointment.html" target="_blank" style="color: black;">
-    <img src="email.png" style="width: 140px;
-    height: 135px;
-    margin-left: 90px;
-    margin-top: -15px" alt="tel-logo">
-    <p style="padding-left: 125px; margin-top: 5px;"><strong>Message</strong></p>
-  </a>
-    <div clas="tt" style="padding-left:50px;">
-    <p><strong>Email:im64863@ubt-uni.net</strong></p>
+
+    <div class="Teksti">
+        <p><span>RRETH</span> NESH</p>
     </div>
-  </div>
-  </div>
-  </div>
-  <div class="boxi111">
-  <div style="padding-top: 20px;">
-    <div class="mrenda-message1" style="padding-top: 40px;">
-    <a href="iframe.html" target="_blank"><img src="loc.png" style="width: 140px;
-      height: 135px;
-      margin-left: 90px;
-      margin-top: -16px" alt="tel-logo"></a>
-    <a href="iframe.html" target="_blank">
-    <p style="padding-left: 124px; margin-top: 5px;  color: black;"><strong>Location</strong></p>
-  </a>
-    <div clas="tt" style="padding-left: 18px;">
-    <p style="padding-left: 20px;"><strong style="padding-top: -4px; padding-left: 20px;">Address:Muharrem Ibraimi</strong></p>
-  </div>
-  </div>
-  </div>
-  </div> 
-  </div>
+    <div ></div>
 
+    <div class="container999">
+        <div class="box999" id="id999">
+        <div class="kryesori-inside-1">
+        <div class="mbrenda-1shit"  id="inside-1"><img clas="imazhi1" style=" width: 300px; border-radius: 16px;" src="foto7.png" alt="foto  e spitalit"></div>
+        <div class="mbrenda-1shit"  id="inside-2"><img clas="imazhi2"style=" width: 300px; border-radius: 16px;" src="foto5.png" alt="foto  e spitalit"></div> 
+        <div class="mbrenda-1shit"  id="inside-3"><img clas="imazhi3"style=" width: 300px; border-radius: 16px;" src="foto6.png" alt="foto  e spitalit"></div>
+        <div class="mbrenda-1shit"  id="inside-4"><img clas="imazhi3"style=" width: 300px; border-radius: 16px;" src="foto8.png" alt="foto  e spitalit"></div>
+        </div>
+        </div>
+        <div class="box999" id="id2">
+            <h1 class="provide"  style="color:#1C9FA7; font-size: 30px; margin-top: 80px;">SPITALI GRIETA</h1>
+            <div class="provide"id="c2">
+                <br>
+            <p class="animate__animated animate__bounce   animation: bounce; animation-duration: 4s" id="tektsti999" style="font-weight: bold";>We provide the best medical Care Treatment for your health</p>
+            <p class="animate__animated animate__bounce animate__repeat-2" id="tektsti999" style="margin-top: 30px;">We provide the special steps and advice of health care treatment and high level of best technology involve is the our hospital.</p>
+            </div>
+        
+                <div class="provide"id="c3" style="font-weight: 400px;">
+                        <ul><li>&#10132; Top special Doctors</li></ul>
+                        <ul><li>&#10132;Your Helath is our Priority</li></ul>      
+                        <ul><li>&#10132;Best Quality Treatment you get</li></ul>
+                        <ul><li>&#10132;Online Medical Delivery Service</li></ul>
+                        <ul><li>&#10132; 24/7 Hours Call Responing System</li></ul>
+                        <ul><li>&#10132; Provide All Health Treatment Under One Roof</li></ul>  
+                </div>
+        
+        </div>
+        </div>
 
-<div class="second">
-<div class="divv2">
-
-  <form>
-    <input class="inputat"  style="background-color:rgb(0, 128, 128);border: none;margin-top: 35px;background: transparent;
-    outline: none; margin-left: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;" type="text" id="emri" name="name" placeholder="Enter your name" required><label  style="margin-right: 10px;" id="nameerror2"></label>
-  </div>
-  <div class="divv2">
-    <input class="inputat" id="email" type="email" name="email" placeholder="Enter your email" style=" color: black;
-    background-color: silver;  background-color:#008080;  background-color:rgb(0, 128, 128);
-  border: none;
-  margin-top: 35px;
-  background: transparent;
-  outline: none; font-size: 1.2em; font-family:'Times New Roman', Times, serif;" required><label id="emailerror2"></label>
-  </div>
-  <div class="divv2">
-    <input class="inputat" type="text" id="phone" name="number" placeholder="Enter your Phone Number" style="width: 200px;  background-color:rgb(0, 128, 128);
-    border: none;
-    margin-top: 35px;
-    background: transparent;
-    outline: none; font-size: 1.2em; font-family:'Times New Roman', Times, serif;"required><label id="Numbererror2" style="margin-left: 5px;"></label>
-  </div>
-  <div class="divv2">
-    <input class="inputat"  style="background-color:rgb(0, 128, 128);
-    border: none;
-    margin-top: 35px;
-    background: transparent;
-    outline: none; font-size: 1.2em; font-family:'Times New Roman', Times, serif;" type="text" id="service" name="service" placeholder="Enter Service" required><label id="Serviceerror2"></label>
-  </div>
   
-  </div>
-  <div class="nder" style="padding-left: 20px;">
-  <input class="input-ne-veti" id="input-1" type="text" name="email" placeholder="Enter your email" style=" border: none; outline: none; background: transparent; margin-left: 115px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;"  required><label id="Emaileerror3"></label>
-  </div>
-  <input class="input-ne-veti" id="input-2" type="submit" onclick="validimiKontakti()" name="submit" value="Submit" style="display: flex; text-decoration: none; color: black; width: 200px; margin: 20px; height: 30px; padding-top: 2px; border-radius: 12px; background-color: rgb(0, 128, 128); padding-left: 70px; margin-left: 670px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;" >
-  </form>
+<br>
 
-  <script>
+<section class="klasaefooterit">
+  <div class="main999">
+    <div class="d1">
+        <div class="g">
+            <div style="display: flex; align-items: center; margin-top: -3px;">
+                <img src="logo-color.png" style="width: 40px;" alt="+logo">
+                <h1 style="color: #389c84; padding-left: 7px;">Grieta Hospital</h1>
+            </div>
+            <p style="margin-top: 2px;">
+            Grieta është një platformë inovative shëndetësore
+            që sjell një eksperiencë të re dhe të përmirësuar për pacientët.
+                </p>
+        </div>
+    </div>
+    <div class="d1">
+        <div class="g2" style="margin-left: 80px;">
+            <h1 style="color: #389c84; ">Menu</h1>
+            <div class="okok1">
+            <p class="okok">Grieta</p>
+            <p class="okok">Sherbimet</p>
+            <p class="okok">Stafi</p>
+            <p class="okok">Termini</p>
+            <p class="okok">Rreth nesh</p>
+            <p class="okok">Kontakti</p>
+          </div>
+        </div>
+    </div>
+    <div class="d1">
+        <div class="g3">
+            <h1 style="color:#389c84;">Sherbimet</h1>
+            <p class="okok2">Kujdesi Intenziv</p>
+            <p class="okok2">Ndihma e parë</p>
+            <p class="okok2">Medikamente</p>
+            <p class="okok2">Konsulta Psikologjike</p>
+            <p class="okok2">Stomatologji</p>
+            <p class="okok2">Oftamologji</p>
+            <p class="okok2">ORL</p>
+        </div>
+    </div>
+    <div class="d1">
+        <div class="g4">
+            <h1 style="padding-left: 20px;color:#389c84;">Get Into Touch</h1>
+            <div>
+             <form>
+           <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;   padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
+           <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now" style="display: flex; text-decoration: none;color: black;width: 260px; font-size: 1.2em; font-family:'Times New Roman', Times, serif; height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
+            </form>    
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+<p class="Copyright" style="padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright © 2023 Get Appointment All Right Reserved</p>  
+
+
+
+</section>
+
+
+
+
+</section>
+
+    
+<script>
+   let i = 0;
+        let imgArray = ['doktori1.jpg','doktori2.jpg', 'doktori3.jpg', 'doktori4.jpg'];
+
+        function changeImg(){
+            document.getElementById('slideshow').src = imgArray[i];
+
+            if(i< imgArray.length -1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("changeImg()", 3000);
+        }
+        document.addEventListener(onload, changeImg());
 
 
     function validimiKontakti(){
@@ -476,128 +481,34 @@ session_start();
     
     
     
+    let EemailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/; 
+
+
+
+function validimiFOOTER(){
+let iiinputEmail=document.getElementById('eemaiInputt');
+let emAilError=document.getElementById('errorInputEmaili');
+emAilError.innerText='';
+
+  if(!EemailREGEX.test(iiinputEmail.value)){
+    emAilError.style.color='#FF0000';
+    emAilError.innerText='Wrong Email';
+    alert("Ju Lutemi Plotesoni Emailen Sic Duhet !!");
+    return;
+  }
+  else if(EemailREGEX.test(iiinputEmail.value)){
+    emAilError.style.color='#58FF00';
+    emAilError.innerText='Successfully Email';
+    alert("Ju Keni Plotesuar Emailen Sic Duhet !!"); 
+    return;
+  }
+
+}
+ 
     
     
     
-    
-    </script>
-<br>
 
-<section class="klasaefooterit">
-  <div class="main999">
-    <div class="d1">
-        <div class="g">
-            <div style="display: flex; align-items: center; margin-top: -3px;">
-                <img src="logo_+.png" style="width: 40px;" alt="+logo">
-                <h1 style="color: #389c84; padding-left: 7px;">Get Appointment</h1>
-            </div>
-            <p style="margin-top: 2px;">Booking an online doctor appointment
-                was incerdibly convient and efficient. The
-                doctor provided excellent care. Making it
-                a hassle-free and positive experience.
-                </p>
-        </div>
-    </div>
-    <div class="d1">
-        <div class="g2" style="margin-left: 80px;">
-            <h1 style="color: #389c84; ">Menu</h1>
-            <div class="okok1">
-            <p class="okok">Home</p>
-            <p class="okok">Service</p>
-            <p class="okok">Our Team</p>
-            <p class="okok">About</p>
-            <p class="okok">Blogs</p>
-            <p class="okok">Booking</p>
-          </div>
-        </div>
-    </div>
-    <div class="d1">
-        <div class="g3">
-            <h1 style="color:#389c84;">Our Service</h1>
-            <p class="okok2">First and Service</p>
-            <p class="okok2">Dental Treatment</p>
-            <p class="okok2">Eye Treatment</p>
-            <p class="okok2">Nose Treatment</p>
-            <p class="okok2">Ambulance Service</p>
-            <p class="okok2">Proper Mediation</p>
-            <p class="okok2">Body Rashears</p>
-        </div>
-    </div>
-    <div class="d1">
-        <div class="g4">
-            <h1 style="padding-left: 20px;color:#389c84;">Get Into Touch</h1>
-            <div>
-             <form>
-           <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;   padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
-           <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now" style="display: flex; text-decoration: none;color: black;width: 260px; font-size: 1.2em; font-family:'Times New Roman', Times, serif; height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
-            </form>    
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <script>
-  let EemailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/; 
-
-
-
-      function validimiFOOTER(){
-  let iiinputEmail=document.getElementById('eemaiInputt');
-  let emAilError=document.getElementById('errorInputEmaili');
-  emAilError.innerText='';
-
-        if(!EemailREGEX.test(iiinputEmail.value)){
-          emAilError.style.color='#FF0000';
-          emAilError.innerText='Wrong Email';
-          alert("Ju Lutemi Plotesoni Emailen Sic Duhet !!");
-          return;
-        }
-        else if(EemailREGEX.test(iiinputEmail.value)){
-          emAilError.style.color='#58FF00';
-          emAilError.innerText='Successfully Email';
-          alert("Ju Keni Plotesuar Emailen Sic Duhet !!"); 
-          return;
-        }
-    
-      }
-       
-
-
-
-  </script>
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-<p class="Copyright" style="padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright © 2023 Get Appointment All Right Reserved</p>  
-
-
-
-</section>
-
-
-
-
-</section>
-
-    
-<script>
-   let i = 0;
-        let imgArray = ['doktori1.jpg','doktori2.jpg', 'doktori3.jpg', 'doktori4.jpg'];
-
-        function changeImg(){
-            document.getElementById('slideshow').src = imgArray[i];
-
-            if(i< imgArray.length -1){
-                i++;
-            }
-            else{
-                i=0;
-            }
-            setTimeout("changeImg()", 3000);
-        }
-        document.addEventListener(onload, changeImg());
 </script>
 
 </body>

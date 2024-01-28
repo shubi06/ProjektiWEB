@@ -6,7 +6,7 @@ include ('../database/dbconnection.php');
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TERMINET E CAKTUARA</title>
+  <title>MESZAHET </title>
  
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
@@ -16,7 +16,7 @@ include ('../database/dbconnection.php');
 <div>
     <div>
         <div>
-            <h3>TERMINET E CAKTUARA</h3>
+            <h3>MESAZHET</h3>
             <hr>
             <?php if (isset($_SESSION['response'])) { ?>
             <div class="alert alert-<?php echo  $_SESSION['res_type']; ?> alert-dismissible text-center">
@@ -30,7 +30,7 @@ include ('../database/dbconnection.php');
         </div>
         <div>
             <?php
-              $query = 'SELECT * FROM terminet';
+              $query = 'SELECT * FROM kontakti';
               $stmt = $conn->prepare($query);
               $stmt->execute();
               $result = $stmt->get_result();
@@ -47,9 +47,9 @@ include ('../database/dbconnection.php');
                   <th>EMRI</th>
                   <th>MBIEMRI</th>
                   <th>NR TELEFONIT</th>
-                  <th>SHERBIMI</th>
-                  <th>ORA</th>
-                  <th>DATA</th>
+                  <th>EMAIL</th>
+                  <th>MESAZHI</th>
+            
     
                 
                 </tr>
@@ -60,13 +60,9 @@ include ('../database/dbconnection.php');
                   <td><?php echo  $row['id']; ?></td>
                   <td><?php echo  $row['emri']; ?></td>
                   <td><?php echo  $row['mbiemri']; ?></td>
-                  <td><?php echo  $row['nr']; ?></td>
-                  <td><?php echo  $row['sherbimi']; ?></td>
-                  <td><?php echo  $row['ora']; ?></td>
-                  <td><?php echo  $row['data']; ?></td>
-    
-    
-                
+                  <td><?php echo  $row['numri']; ?></td>
+                  <td><?php echo  $row['email']; ?></td>
+                  <td><?php echo  $row['mesazhi']; ?></td>
                 </tr>
                 <?php } ?>
               </tbody>

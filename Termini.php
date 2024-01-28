@@ -49,8 +49,9 @@ if(isset($_POST['butonicakto'])){
                <li>   <a href="index.php">Grieta</a> </li> 
                <li>   <a href="sherbimet.php" target=”_blank” >Shërbimet</a> </li>  
                <li>   <a href="Stafiyne.php" target="_blank">Stafi</a></li>  
-               <li>   <a href="about-us.php" target=”_blank” >Rreth nesh</a></li>  
                <li>   <a href="termini.php" target="_blank">Termini</a></li> 
+               <li>   <a href="about-us.php" target=”_blank” >Rreth nesh</a></li>  
+               <li>   <a href="book-an-appointment.php" target=”_blank” >Kontakti</a></li>  
                
             
              
@@ -729,58 +730,68 @@ if (orAiNputi.value=='') {
 
 
 <footer>
-    <section class="klasaefooterit">
-        <div class="main999">
-          <div class="d1">
-              <div class="g">
-                  <div style="display: flex; align-items: center;">
-                      <img src="logo_+.png" style="width: 40px;" alt="+logo">
-                      <h1 style="color: white; padding-left: 10px;">Get Appointment</h1>
-                  </div>
-                  <p style="margin-top: 2px;">Booking an online doctor appointment
-                      was incerdibly convient and efficient. The
-                      doctor provided excellent care. Making it
-                      a hassle-free and positive experience.
-                      </p>
-              </div>
+<section class="klasaefooterit">
+  <div class="main999">
+    <div class="d1">
+        <div class="g">
+            <div style="display: flex; align-items: center; margin-top: -3px;">
+                <img src="logo-bardh.png" style="width: 40px;" alt="+logo">
+                <h1 style="color: #ffffff; padding-left: 7px;">Grieta Hospital</h1>
+            </div>
+            <p style="margin-top: 2px;">
+            Grieta është një platformë inovative shëndetësore
+            që sjell një eksperiencë të re dhe të përmirësuar për pacientët.
+                </p>
+        </div>
+    </div>
+    <div class="d1">
+        <div class="g2" style="margin-left: 80px;">
+            <h1 style="color: #ffffff; ">Menu</h1>
+            <div class="okok1">
+            <p class="okok">Grieta</p>
+            <p class="okok">Sherbimet</p>
+            <p class="okok">Stafi</p>
+            <p class="okok">Termini</p>
+            <p class="okok">Rreth nesh</p>
+            <p class="okok">Kontakti</p>
           </div>
-          <div class="d1">
-              <div class="g2" style="margin-left: 80px;">
-                  <h1 style="color: white; ">Menu</h1>
-                  <div class="okok1">
-                  <p class="okok">Home</p>
-                  <p class="okok">Service</p>
-                  <p class="okok">Our Team</p>
-                  <p class="okok">About</p>
-                  <p class="okok">Blogs</p>
-                  <p class="okok">Booking</p>
-                </div>
-              </div>
-          </div>
-          <div class="d1">
-              <div class="g3">
-                  <h1 style="color:white;">Our Service</h1>
-                  <p class="okok2">First and Service</p>
-                  <p class="okok2">Dental Treatment</p>
-                  <p class="okok2">Eye Treatment</p>
-                  <p class="okok2">Nose Treatment</p>
-                  <p class="okok2">Ambulance Service</p>
-                  <p class="okok2">Proper Mediation</p>
-                  <p class="okok2">Body Rashears</p>
-              </div>
-          </div>
-          <div class="d1">
-              <div class="g4">
-                  <h1 style="padding-left: 20px;color:white;">Get Into Touch</h1>
-                  <div>
-                   <form>
-                 <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
-                 <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now" style="display: flex; text-decoration: none;color: black;width: 260px;  height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
-                  </form>    
-              </div>
-              </div>
-          </div>
-          </div>
+        </div>
+    </div>
+    <div class="d1">
+        <div class="g3">
+            <h1 style="color:#ffffff;">Sherbimet</h1>
+            <p class="okok2">Kujdesi Intenziv</p>
+            <p class="okok2">Ndihma e parë</p>
+            <p class="okok2">Medikamente</p>
+            <p class="okok2">Konsulta Psikologjike</p>
+            <p class="okok2">Stomatologji</p>
+            <p class="okok2">Oftamologji</p>
+            <p class="okok2">ORL</p>
+        </div>
+    </div>
+    <div class="d1">
+        <div class="g4">
+            <h1 style="padding-left: 20px;color:#ffffff;">Get Into Touch</h1>
+            <div>
+             <form>
+           <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;   padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
+           <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now" style="display: flex; text-decoration: none;color: black;width: 260px; font-size: 1.2em; font-family:'Times New Roman', Times, serif; height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
+            </form>    
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+<p class="Copyright" style="padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright © 2023 Get Appointment All Right Reserved</p>  
+
+
+
+</section>
       
           <script>
         let EemailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/; 
@@ -811,13 +822,7 @@ if (orAiNputi.value=='') {
       
       
         </script>
-          <br>
-          <br>
-          <hr>
-          <br>
-          <br>
-      <p class="Copyright" style=" color: black;padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright © 2023 Get Appointment All Right Reserved</p>  
-      </section>
+
     </footer>
 
 

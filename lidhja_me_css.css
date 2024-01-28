@@ -333,8 +333,9 @@ border-bottom-right-radius: 40px;
     width: 1520px;
     padding-top: 40px;
     margin-top: 100px;
-    background:url(back1.png) no-repeat center bottom  ;
-    background-size:cover;
+    /* background:url(back1.png) no-repeat center bottom  ;
+    background-size:1000px; */
+
 }
 /* .container background{
 opacity: 0.1;
@@ -349,7 +350,7 @@ background-color: red;
     padding-top: 160px;
     /* padding-left: 24px;
     padding-right: 24px; */
-    width: 1520px;
+    
 }
 
 

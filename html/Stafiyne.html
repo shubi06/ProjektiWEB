@@ -1,0 +1,366 @@
+<?php
+include('admin_panel/Product.php');
+
+
+include('includes/connect.php');
+
+$select_query = "SELECT * FROM `products` ORDER BY emri";
+$result_query = mysqli_query($connect, $select_query);
+
+$desiredCategoryId = 2;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="lidhja_me_css.css">
+
+    <title>Stafi ynë</title>
+</head>
+<body>
+
+    <header class="header" >
+        <div class="navigimi">
+        <div class="nav-start">
+       
+    
+            <ul>
+
+                <li>   <a href="index.html"><img  style="width: 70px; height: 60px;" src="logo-bardh.png" alt=""></a> </li>
+                <li>   <a href="index.html">Grieta</a> </li> 
+                <li>   <a href="sherbimet.html" target=”_blank” >Shërbimet</a> </li>  
+                <li>   <a href="Stafiyne.html">Stafi</a></li>  
+                <li>   <a href="about-us.html" target=”_blank” >Rreth nesh</a></li>  
+                <li>   <a href="book-an-appointment.html" target="_blank">Kontakti</a></li> 
+                
+             </ul>
+
+
+        </div>
+        
+        <div class="nav-end">
+           <ul>
+        <li> <a href="login.html"> <button class="regj"> Kyqu</button></a> </li>
+        <li> <a href="register.html"> <button class="regj"> Regjistrohu</button></a> </li>
+        </ul>
+        </div>
+        </div>
+
+    </header>
+
+    <section>
+
+      
+        <div class="services" style="background-color: #f2f2f2;">
+            <div class="Teksti">
+                <p><span>STAFI</span> YNË</p>
+            </div>
+            
+
+            <div class="rubrikat">
+                <div class="card1">
+                    <div class="image1"> <img src="DOKTORI1.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                           Dr. John Doe
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        7 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         KARDIOLOG
+                        
+                       </a>
+                     </div>
+                   </div>
+            
+                   <!-- <div class="card1">
+                    <div class="image5"> <img src="DOKTORI2.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                           Dr. Anthony Taylor
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        5 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         FARMACIST
+                        
+                       </a>
+                     </div>
+                   </div>
+            
+                   <div class="card1">
+                    <div class="image1"> <img src="DOKTORI3.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                           Dr. Maria Joshua
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        4 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         INFERMIERE
+                        
+                       </a>
+                     </div>
+                   </div>
+
+                   <div class="card1">
+                    <div class="image1"> <img src="DOKTORI4.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                           Dr. Will Bank
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        4 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         OFTAMOLOG
+                        
+                       </a>
+                     </div>
+                   </div>
+
+                   <div class="card1">
+                    <div class="image1"> <img src="DOKTORI6.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                           Dr. Aysha Sess
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        2 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         ORL
+                        
+                       </a>
+                     </div>
+                   </div>
+
+                   <div class="card1">
+                    <div class="image1"> <img src="DOKTORI5.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                            Dr. Kevin Bystron
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        3 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                           
+                           NDIHMA E PARË
+                       </a>
+                     </div>
+                   </div>
+
+                   <div class="card1">
+                    <div class="image1"> <img src="DOKTORI7.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                            Dr. Tristene Ling
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        4 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         INFERMIERE
+                        
+                       </a>
+                     </div>
+                   </div>
+
+                   <div class="card1">
+                    <div class="image1"> <img src="DOKTORI8.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                            Dr. Alan Floriano
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        8 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         STOMATOLOG
+                        
+                       </a>
+                     </div>
+                   </div> -->
+
+                   <!-- <div class="card1">
+                    <div class="image1"> <img src="DOKTORI9.png" alt=""></div>
+                     <div class="content2">
+                        
+                       <a href="#">
+                         <span class="title1">
+                            Dr. Scott Baity
+                         </span>
+                       </a>
+                   
+                       <p class="desc">
+                        1 vjet eksperiencë pune.
+                       </p>
+                   
+                       <a class="action" href="#">
+                         KUJDES INTENZIV
+                        
+                       </a>
+                     </div>
+                   </div> -->
+
+            
+                  
+            
+            
+            
+            
+                </div>
+
+            </div>        
+    
+    </section>
+
+
+    <section class="footerFoRsHerbimet" style="background-color: #f2f2f2;">
+      <section class="klasaefooterit">
+        <div class="main999"><!--/style="margin-top: 80px;"-->
+          <div class="d1">
+              <div class="g">
+                  <div style="display: flex; align-items: center;">
+                      <img src="logo_+.png" style="width: 40px;" alt="+logo">
+                      <h1 style="color: #389c84; padding-left: 10px;">Get Appointment</h1>
+                  </div>
+                  <p style="margin-top: 2px;">Booking an online doctor appointment
+                      was incerdibly convient and efficient. The
+                      doctor provided excellent care. Making it
+                      a hassle-free and positive experience.
+                      </p>
+              </div>
+          </div>
+          <div class="d1">
+              <div class="g2" style="margin-left: 80px;">
+                  <h1 style="color: #389c84; ">Menu</h1>
+                  <div class="okok1">
+                  <p class="okok">Home</p>
+                  <p class="okok">Service</p>
+                  <p class="okok">Our Team</p>
+                  <p class="okok">About</p>
+                  <p class="okok">Blogs</p>
+                  <p class="okok">Booking</p>
+                </div>
+              </div>
+          </div>
+          <div class="d1">
+              <div class="g3">
+                  <h1 style="color:#389c84;">Our Service</h1>
+                  <p class="okok2">First and Service</p>
+                  <p class="okok2">Dental Treatment</p>
+                  <p class="okok2">Eye Treatment</p>
+                  <p class="okok2">Nose Treatment</p>
+                  <p class="okok2">Ambulance Service</p>
+                  <p class="okok2">Proper Mediation</p>
+                  <p class="okok2">Body Rashears</p>
+              </div>
+          </div>
+          <div class="d1">
+              <div class="g4">
+                  <h1 style="padding-left: 20px;color:#389c84;">Get Into Touch</h1>
+                  <div>
+                   <form>
+                 <input type="email" id="eemaiInputt" required placeholder="Email Address" style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;   padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
+                 <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now" style="display: flex; text-decoration: none;color: black;width: 260px; font-size: 1.2em; font-family:'Times New Roman', Times, serif; height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
+                  </form>    
+              </div>
+              </div>
+          </div>
+          </div>
+      
+          <script>
+        let EemailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/; 
+      
+      
+      
+            function validimiFOOTER(){
+        let iiinputEmail=document.getElementById('eemaiInputt');
+        let emAilError=document.getElementById('errorInputEmaili');
+        emAilError.innerText='';
+      
+              if(!EemailREGEX.test(iiinputEmail.value)){
+                emAilError.style.color='#FF0000';
+                emAilError.innerText='Wrong Email';
+                alert("Ju Lutemi Plotesoni Emailen Sic Duhet !!");
+                return;
+              }
+              else if(EemailREGEX.test(iiinputEmail.value)){
+                emAilError.style.color='#58FF00';
+                emAilError.innerText='Successfully Email';
+                alert("Ju Keni Plotesuar Emailen Sic Duhet !!"); 
+                return;
+              }
+          
+            }
+             
+      
+      
+      
+        </script>
+          <br>
+          <br>
+          <hr>
+          <br>
+          <br>
+      <p class="Copyright" style="padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright © 2023 Get Appointment All Right Reserved</p>  
+      
+      </section>
+    </section>
+    
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<script>
+    let EemailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/; 
+
+
+
+        function validimiFOOTER(){
+    let iiinputEmail=document.getElementById('eemaiInputt');
+    let emAilError=document.getElementById('errorInputEmaili');
+    emAilError.innerText='';
+
+          if(!EemailREGEX.test(iiinputEmail.value)){
+            emAilError.style.color='red';
+            emAilError.innerText='Wrong Email';
+            alert("Ju Lutemi Plotesoni Emailen Sic Duhet !!");
+          }
+          else if(EemailREGEX.test(iiinputEmail.value)){
+            emAilError.style.color='green';
+            emAilError.innerText='Successfully Email';
+            alert("Ju Keni Plotesuar Emailen Sic Duhet !!");
+          }
+      
+        }

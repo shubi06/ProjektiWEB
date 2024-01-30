@@ -205,7 +205,60 @@ border-bottom-right-radius: 40px;
 
 
 
-
+/* Stilizimi për pajisjet mobile */
+@media only screen and (max-width: 768px) {
+    .thonjezat1, .thonjezat2 {
+      justify-content: center; /* Qendro elementet në qendër */
+      margin: 0; /* Fshij marginat */
+    }
+    
+    .boxxxi, .boxxxi1, .Klienti2 {
+      width: 80%; /* Redukto gjërësinë e kutive përmbajtëse */
+      margin: 20px 0; /* Shto një hapësirë në mes të elementeve */
+    }
+    
+    .pershkrimi {
+      padding: 10px; /* Redukto padding-un për tekstin */
+      text-align: center; /* Qendro tekstin */
+    }
+    
+    .container999 {
+      flex-direction: column; /* Ndërro drejtimin e elementeve në kolonë */
+      align-items: center; /* Qendro elementet në qendër */
+      height: auto; /* Përshtato lartësinë bazuar në përmbajtjen e brendshme */
+      background-size: cover; /* Mbush hapësirën e fushës */
+      padding: 20px; /* Shto një padding përreth përmbajtjes */
+    }
+    
+    .main999 {
+      flex-direction: column; /* Ndërro drejtimin e elementeve në kolonë */
+      align-items: center; /* Qendro elementet në qendër */
+      margin: 0; /* Fshij marginat */
+    }
+    
+    .d1 {
+      width: 100%; /* Mbush gjërësinë e prindit */
+      margin-bottom: 20px; /* Shto një hapësirë midis elementeve */
+    }
+    
+    .g, .g2, .g3, .g4 {
+      padding: 0 10px; /* Redukto padding-un për tekstin */
+      text-align: center; /* Qendro tekstin */
+    }
+    
+    hr {
+      margin: 20px auto; /* Shto një hapësirë mbi dhe poshtë linjës */
+    }
+    
+    .Copyright {
+      text-align: center; /* Qendro tekstin */
+    }
+    
+    .feedback, .provide {
+      font-size: 16px; /* Redukto madhësinë e fontit */
+    }
+  }
+  
 
 
 

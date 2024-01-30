@@ -63,37 +63,30 @@ else if (isset($_POST['login_btn']))
     if(mysqli_num_rows($login_query_run) > 0 ) 
     {
         $_SESSION['auth'] = true;
-
+    
         $userdata = mysqli_fetch_array($login_query_run);
         $useremri = $userdata['emri'];
         $useremail = $userdata['email'];
         $role_as = $userdata['role_as'];
         
-        
-
         $_SESSION['auth_user'] = [
             'emri' => $useremri,
-          'email'=> $useremail 
-          
+            'email'=> $useremail 
         ];
-
+    
         $_SESSION['role_as']=$role_as;
-
-        if($role_as==1) {
+    
+        if($role_as == 1) {
             $_SESSION['message']='Mire se vini ne Dashboard';
-            header('Location: dashboard/dashboard.php');
-            
-        }
-        else{
+            header('Location: dashboard.php');
+        } else {
             $_SESSION['message']='U kyqet me sukses';
             header('Location: index.php');
         }
-       
-
-    }
-    else {
+    } else {
         $_SESSION['message'] = "Gabim";
-        header ('Location: login.php');
+        header('Location: login.php');
     }
+    
 }
 ?>

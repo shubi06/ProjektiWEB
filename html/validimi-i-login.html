@@ -1,0 +1,61 @@
+<script>
+
+    let EMailREGEX=/\w[a-z || 0-9 || A-Z]+@+\w[a-z]{3,10}[._-]{1}\w{3}/;//shuajbbunjaku2@gmail.com
+    let PAsswordREGEX=/[a-zA-Z]{7,15}[0-9]{1,5}/;//passwordABC12
+
+
+    function LOGINValidation(){
+
+    let InputEMAIL=document.getElementById('emailID');
+    let InputPassworDD=document.getElementById('passwordID');
+
+    let EERROREMAIL=document.getElementById('erroriemaili');
+    let ERORRPSW=document.getElementById('erroripasswordii');
+
+    EERROREMAIL.innerText='';
+    ERORRPSW.innerText='';
+
+        if(EMailREGEX.test(InputEMAIL.value)){
+           
+            if( !PAsswordREGEX.test(InputPassworDD.value)){
+                ERORRPSW.innerText='Password nuk është i saktë !!';
+                ERORRPSW.style.color='red';
+                alert("Ju lutemi shkruajeni mirë Passwordin");
+                return false;   
+            }  
+        }
+        if(PAsswordREGEX.test(InputPassworDD.value)){
+           
+               if(!EMailREGEX.test(InputEMAIL.value)){
+                EERROREMAIL.style.color='red';
+            EERROREMAIL.innerText='Emaili nuk është i saktë !!';
+            alert("Ju lutemi plotësojeni kushtin");
+            return false;
+               }
+        } 
+        
+        if(!EMailREGEX.test(InputEMAIL.value) && !PAsswordREGEX.test(InputPassworDD.value)){
+            EERROREMAIL.style.color='red';
+            ERORRPSW.style.color='red';
+            EERROREMAIL.innerText='Emaili nuk eshte i sakte !!';
+            ERORRPSW.innerText='Shkruane passwordin e sakte !!';
+            alert("Emaili dhe Passwordi jane te pasakte !!");
+            return false;
+        }
+
+        if(EMailREGEX.test(InputEMAIL.value) && PAsswordREGEX.test(InputPassworDD.value)){
+            EERROREMAIL.style.color='green';
+            ERORRPSW.style.color='green';
+            EERROREMAIL.innerText='Emaili  eshte i sakte !!';
+            ERORRPSW.innerText='Passwordin eshte i sakte !!';
+          
+            return true;
+        }
+
+ 
+}
+
+
+
+
+</script>

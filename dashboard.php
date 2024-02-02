@@ -7,7 +7,12 @@ if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
     header('Location: login.php');
     exit; // Ndalo ekzekutimin e kodit pas redirektimit
 }
-
+if (isset($_SESSION['auth_user']['emri'])) {
+    $userId = $_SESSION['auth_user']['emri'];
+    echo "ADMIN EMRI: " . $userId;
+} else {
+    echo "No user ID found in session.";
+}
 // Kontrollo rolin e përdoruesit
 if (isset($_SESSION['role_as'])) {
     $role_as = $_SESSION['role_as'];

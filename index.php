@@ -1,7 +1,5 @@
 <?php 
 session_start();
-// include ('middleware/adminMiddleware.php');
-
 
 ?>
 
@@ -9,13 +7,14 @@ session_start();
 <html lang="en">
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lidhja_me_cssSH.css">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>Grieta Hospital</title>
 
@@ -33,7 +32,7 @@ session_start();
 
                 <ul>
 
-                    <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="images/logo-bardh.png" alt=""></a>
+                    <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="1.png" alt=""></a>
                     </li>
                     <li> <a href="index.php">Grieta</a> </li>
                     <li> <a href="sherbimet.php" target=”_blank”>Shërbimet</a> </li>
@@ -87,7 +86,7 @@ session_start();
                 <div class="pjesa1">
                     <h2>Spitali më i vlerësuar <br> <span> në Europë. </span>
                         <div class="paragrafi">
-                            <p>Grieta është një platformë inovative shëndetësore <br> që sjell një eksperiencë të re dhe
+                            <p>Grieta është një platformë inovative shëndetësore që sjell një eksperiencë të re dhe
                                 të përmirësuar për pacientët. </p>
                         </div>
                         <a style="text-decoration: none;" href="Termini.php" target="_blank"> <button class="btn"> CAKTO
@@ -203,7 +202,7 @@ session_start();
         </div>
 
         <div class="thonjezat1">
-            <img src="th1.png" style="height: 200px; width: 200px;" alt="">
+            <img src="images/th1.png" style="height: 200px; width: 200px;" alt="">
         </div>
 
         <div class="Klienti1">
@@ -263,13 +262,17 @@ session_start();
             <div class="box999" id="id999">
                 <div class="kryesori-inside-1">
                     <div class="mbrenda-1shit" id="inside-1"><img clas="imazhi1"
-                            style=" width: 300px; border-radius: 16px;" src="images/foto7.png" alt="foto  e spitalit"></div>
+                            style=" width: 300px; border-radius: 16px;" src="images/foto7.png" alt="foto  e spitalit">
+                    </div>
                     <div class="mbrenda-1shit" id="inside-2"><img clas="imazhi2"
-                            style=" width: 300px; border-radius: 16px;" src="images/foto5.png" alt="foto  e spitalit"></div>
+                            style=" width: 300px; border-radius: 16px;" src="images/foto5.png" alt="foto  e spitalit">
+                    </div>
                     <div class="mbrenda-1shit" id="inside-3"><img clas="imazhi3"
-                            style=" width: 300px; border-radius: 16px;" src="images/foto6.png" alt="foto  e spitalit"></div>
+                            style=" width: 300px; border-radius: 16px;" src="images/foto6.png" alt="foto  e spitalit">
+                    </div>
                     <div class="mbrenda-1shit" id="inside-4"><img clas="imazhi3"
-                            style=" width: 300px; border-radius: 16px;" src="images/foto8.png" alt="foto  e spitalit"></div>
+                            style=" width: 300px; border-radius: 16px;" src="images/foto8.png" alt="foto  e spitalit">
+                    </div>
                 </div>
             </div>
             <div class="box999" id="id2">
@@ -313,7 +316,7 @@ session_start();
                     <div class="g">
                         <div style="display: flex; align-items: center; margin-top: -3px;">
                             <img src="images/logo-color.png" style="width: 40px;" alt="+logo">
-                            <h1 style="color: #389c84; padding-left: 7px;">Grieta Hospital</h1>
+                            <h1 style="color: #1C9FA7; padding-left: 7px;">Grieta Hospital</h1>
                         </div>
                         <p style="margin-top: 2px;">
                             Grieta është një platformë inovative shëndetësore
@@ -323,7 +326,7 @@ session_start();
                 </div>
                 <div class="d1">
                     <div class="g2" style="margin-left: 80px;">
-                        <h1 style="color: #389c84; ">Menu</h1>
+                        <h1 style="color: #1C9FA7; ">Menu</h1>
                         <div class="okok1">
                             <p class="okok">Grieta</p>
                             <p class="okok">Sherbimet</p>
@@ -336,7 +339,7 @@ session_start();
                 </div>
                 <div class="d1">
                     <div class="g3">
-                        <h1 style="color:#389c84;">Sherbimet</h1>
+                        <h1 style="color:#1C9FA7;">Sherbimet</h1>
                         <p class="okok2">Kujdesi Intenziv</p>
                         <p class="okok2">Ndihma e parë</p>
                         <p class="okok2">Medikamente</p>
@@ -352,10 +355,10 @@ session_start();
                         <div>
                             <form>
                                 <input type="email" id="eemaiInputt" required placeholder="Email Address"
-                                    style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;   padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #f8f4f4; "><label
+                                    style="display: flex; text-decoration: none; color: black; width: 260px; height: 35px; font-size: 1.2em; font-family:'Times New Roman', Times, serif;   padding-top:8px ;margin-bottom: 20px; margin-top: 10px;  padding-left: 16px; border-radius: 12px;background-color: #1C9FA7; "><label
                                     for="error-email" id="errorInputEmaili" style="padding-left: 5px;"></label>
                                 <input type="submit" required onclick="validimiFOOTER()" value="Subscribe now"
-                                    style="display: flex; text-decoration: none;color: black;width: 260px; font-size: 1.2em; font-family:'Times New Roman', Times, serif; height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:rgb(0, 128, 128);">
+                                    style="display: flex; text-decoration: none;color: black;width: 260px; font-size: 1.2em; font-family:'Times New Roman', Times, serif; height: 35px;padding-top:8px;border-radius:12px;  padding-left: 16px; background-color:#1C9FA7;">
                             </form>
                         </div>
                     </div>
@@ -365,8 +368,7 @@ session_start();
             <br>
             <br>
             <hr>
-            <br>
-            <br>
+
             <p class="Copyright"
                 style="padding-left: 550px; margin-top: 2px; padding-bottom: 10px; margin-bottom: 10px;">Copyright ©
                 2023 Get Appointment All Right Reserved</p>

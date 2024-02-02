@@ -1,5 +1,19 @@
 <?php
 include ('../database/dbconnection.php');
+if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
+    header('Location: ../login.php');
+    exit; // Ndalo ekzekutimin e kodit pas redirektimit
+}
+
+if (isset($_SESSION['role_as'])) {
+    $role_as = $_SESSION['role_as'];
+    
+    // Nëse përdoruesi ka rolin 0, ridrejtojini në faqen fillestare
+    if ($role_as == 0) {
+        header('Location: ../index.php');
+        exit; // Ndalo ekzekutimin e kodit pas redirektimit
+    }
+}
  
   ?>
 <!DOCTYPE html>
@@ -8,7 +22,7 @@ include ('../database/dbconnection.php');
 <head>
     <meta charset="UTF-8">
     <title>TERMINET E CAKTUARA</title>
-
+    <link rel="stylesheet" href="CRUDSTYLE.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>

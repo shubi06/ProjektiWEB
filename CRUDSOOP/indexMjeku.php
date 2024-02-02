@@ -1,6 +1,20 @@
 <?php
 
 include '../controller/MjekuController.php';
+if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
+    header('Location: ../login.php');
+    exit; // Ndalo ekzekutimin e kodit pas redirektimit
+}
+
+if (isset($_SESSION['role_as'])) {
+    $role_as = $_SESSION['role_as'];
+    
+    // Nëse përdoruesi ka rolin 0, ridrejtojini në faqen fillestare
+    if ($role_as == 0) {
+        header('Location: ../index.php');
+        exit; // Ndalo ekzekutimin e kodit pas redirektimit
+    }
+}
 $mjekuController = new MjekuController($conn);
 
 $insert = $mjekuController->insert();
@@ -9,6 +23,8 @@ $delete=$mjekuController->delete();
 if (isset($_POST['update'])) {
   $mjekuController->update();
 }
+
+
 
 $updateData = $mjekuController->edit(); 
 $update = !empty($updateData);
@@ -19,6 +35,10 @@ $titulli = $update ? $updateData['titulli'] : '';
 $eksperienca = $update ? $updateData['eksperienca'] : '';
 $sherbimi = $update ? $updateData['sherbimi'] : '';
 $foto = $update ? $updateData['foto'] : '';
+
+
+
+
 ?>
 
 
@@ -28,7 +48,7 @@ $foto = $update ? $updateData['foto'] : '';
 <head>
     <meta charset="UTF-8">
     <title>CRUD MJEKU</title>
-
+    <link rel="stylesheet" href="CRUDSTYLE.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -110,6 +130,7 @@ $foto = $update ? $updateData['foto'] : '';
                                     <th>EMRI</th>
                                     <th>EKSPERIENCA</th>
                                     <th>SHERBIMI</th>
+                                    <th>NDRYSHIMI ID</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -121,6 +142,7 @@ $foto = $update ? $updateData['foto'] : '';
                                     <td><?php echo $row['titulli']; ?></td>
                                     <td><?php echo $row['eksperienca']; ?></td>
                                     <td><?php echo $row['sherbimi']; ?></td>
+                                    <td><?php echo $row['ndryshimi']; ?></td>
                                     <td>
                                         <a href="detailsOOP.php?details=<?php echo $row['id']; ?>">Details</a> |
                                         <a href="indexMjeku.php?delete=<?php echo $row['id']; ?>"

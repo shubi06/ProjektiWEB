@@ -1,5 +1,19 @@
 <?php
   include '../controller/sherbimetController.php';
+  if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
+    header('Location: ../login.php');
+    exit; // Ndalo ekzekutimin e kodit pas redirektimit
+}
+
+if (isset($_SESSION['role_as'])) {
+    $role_as = $_SESSION['role_as'];
+    
+    // Nëse përdoruesi ka rolin 0, ridrejtojini në faqen fillestare
+    if ($role_as == 0) {
+        header('Location: ../index.php');
+        exit; // Ndalo ekzekutimin e kodit pas redirektimit
+    }
+}
   $sherbimetController = new sherbimetController($conn);
   
   $insert = $sherbimetController->insert();
@@ -19,21 +33,6 @@
   $fotoSh = $update ? $updateData['fotoSh'] : '';
 
 
-// Start the session
-
-// Check if the user ID is set in the session
-if (isset($_SESSION['user_id'])) {
-    // Retrieve the user ID from the session
-    $user_id = $_SESSION['user_id'];
-
-    // Now you can use $user_id in your code
-    echo "User ID: " . $user_id;
-} else {
-    // Redirect the user to the login page or handle the case where the user is not logged in
-    echo "User ID not found in session.";
-}
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +40,7 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>CRUD SHERBIMET</title>
+    <link rel="stylesheet" href="CRUDSTYLE.css">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
@@ -113,6 +113,7 @@ if (isset($_SESSION['user_id'])) {
                                 <th>FOTO</th>
                                 <th>EMERTIMI</th>
                                 <th>PERSHKRIMI</th>
+                                <th>NDRYSHIMI</th>
 
                                 <th>Action</th>
                             </tr>
@@ -124,6 +125,7 @@ if (isset($_SESSION['user_id'])) {
                                 <td><img src="<?php echo  $row['fotoSh']; ?>" width="25"></td>
                                 <td><?php echo  $row['emertim']; ?></td>
                                 <td><?php echo  $row['pershkrimi']; ?></td>
+                                <td><?php echo  $row['ndryshimiSH']; ?></td>
 
                                 <td>
                                     <a href="detailsShOOP.php?details=<?php echo  $row['id']; ?>">Details</a> |

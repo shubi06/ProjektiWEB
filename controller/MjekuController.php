@@ -1,6 +1,15 @@
 <?php
 session_start();
+
 include('../database/dbconnection.php');
+
+
+if (isset($_SESSION['auth_user']['id'])) {
+    $userId = $_SESSION['auth_user']['id'];
+    echo "User ID: " . $userId;
+} else {
+    echo "No user ID found in session.";
+}
 
 
 class MjekuController
@@ -13,11 +22,12 @@ class MjekuController
     private $sherbimi;
     private $foto;
     private $product_categories;
-    
+   
 
     public function __construct($conn)
     {
         $this->conn = $conn;
+  
     }
 
    
@@ -33,7 +43,7 @@ class MjekuController
             $foto = $_FILES['foto']['name'];
             $upload = "CRUDSOOP/uploads/" . $foto;
 
-            $query = "INSERT INTO mjeku (titulli, eksperienca, sherbimi, foto) VALUES (?, ?, ?, ?)";
+            $query = "INSERT INTO mjeku (titulli, eksperienca, sherbimi, foto) VALUES (?, ?, ?,?)";
             $stmt = $this->conn->prepare($query);
             $stmt->bind_param("ssss", $titulli, $eksperienca, $sherbimi, $foto);
             $stmt->execute();
@@ -89,32 +99,40 @@ class MjekuController
 
     }
 
-    public function update()
-    {
-        if (isset($_POST['update'])) {
-            $id = $_POST['id'];
-            $titulli = $_POST['titulli'];
-            $eksperienca = $_POST['eksperienca'];
-            $sherbimi = $_POST['sherbimi'];
-            $oldimage = $_POST['oldimage'];
+   public function update()
+{
+    if (isset($_POST['update'])) {
+        $id = $_POST['id'];
+        $titulli = $_POST['titulli'];
+        $eksperienca = $_POST['eksperienca'];
+        $sherbimi = $_POST['sherbimi'];
+        $oldimage = $_POST['oldimage'];
 
-            if (isset($_FILES['foto']['name']) && ($_FILES['foto']['name'] != "")) {
-                $newimage = "CRUDSOOP/uploads/" . $_FILES['foto']['name'];
-                unlink($oldimage);
-                move_uploaded_file($_FILES['foto']['tmp_name'], $newimage);
-            } else {
-                $newimage = $oldimage;
-            }
-            $query = "UPDATE mjeku SET titulli=?,eksperienca=?,sherbimi=?,foto=? WHERE id=?";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bind_param("ssssi", $titulli, $eksperienca, $sherbimi, $newimage, $id);
-            $stmt->execute();
+        // Merrni emrin e përdoruesit nga sesioni
+        $userId = $_SESSION['auth_user']['id'];
 
-            $_SESSION['response'] = "Updated Successfully!";
-            $_SESSION['res_type'] = "primary";
-            header('location:indexMjeku.php');
+        if (isset($_FILES['foto']['name']) && ($_FILES['foto']['name'] != "")) {
+            $newimage = "CRUDSOOP/uploads/" . $_FILES['foto']['name'];
+            unlink($oldimage);
+            move_uploaded_file($_FILES['foto']['tmp_name'], $newimage);
+        } else {
+            $newimage = $oldimage;
         }
+
+        $query = "UPDATE mjeku SET titulli=?, eksperienca=?, sherbimi=?, foto=?, ndryshimi=? WHERE id=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("ssssii", $titulli, $eksperienca, $sherbimi, $newimage, $userId, $id);
+        $stmt->execute();
+        
+
+        $_SESSION['response'] = "Updated Successfully!";
+        $_SESSION['res_type'] = "primary";
+        header('location:indexMjeku.php');
     }
+}
+
+
+   
     public function details()
     {
         $vid = $vname = $vemail = $vphone = $vphoto = '';
@@ -137,6 +155,8 @@ class MjekuController
 
         return compact('vid', 'vname', 'vemail', 'vphone', 'vphoto');
     }
+
+ 
 
 
    

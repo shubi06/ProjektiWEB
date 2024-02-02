@@ -1,6 +1,12 @@
 <?php
 session_start();
 include('../database/dbconnection.php');
+if (isset($_SESSION['auth_user']['id'])) {
+    $userId = $_SESSION['auth_user']['id'];
+    echo "User ID: " . $userId;
+} else {
+    echo "No user ID found in session.";
+}
 
 
 class sherbimetController
@@ -95,6 +101,7 @@ class sherbimetController
             $emertim=$_POST['emertim'];
             $pershkrimi=$_POST['pershkrimi'];
             $oldimage=$_POST['oldimage'];
+            $userId = $_SESSION['auth_user']['id'];
      
             if(isset($_FILES['fotoSh']['name'])&&($_FILES['fotoSh']['name']!="")){
                 $newimage="CRUDSOOP/uploads/".$_FILES['fotoSh']['name'];
@@ -104,9 +111,9 @@ class sherbimetController
             else{
                 $newimage=$oldimage;
             }
-            $query="UPDATE sherbimet SET fotoSh=?,emertim=?,pershkrimi=? WHERE id=?";
+            $query="UPDATE sherbimet SET fotoSh=?,emertim=?,pershkrimi=?,ndryshimiSH=? WHERE id=?";
             $stmt=$this->conn->prepare($query);
-            $stmt->bind_param("ssss",$newimage,$emertim,$pershkrimi,$id);
+            $stmt->bind_param("sssss",$newimage,$emertim,$pershkrimi,$userId,$id);
             $stmt->execute();
      
             $_SESSION['response']="Updated Successfully!";

@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,21 +5,15 @@
   font-family: 'Campton', sans-serif;
 }
 
-@media screen and (max-width:900px) {
-  
-  header{
-      background-color: blueviolet;
-      color: white;
-  }
-}
-
-
 
 
 .header {
-  padding: 10px;
-  background-color: #1C9FA7;
+  padding: 10px 80px;
+  background-color: #ffffff;
+
+
 }
+
 
 .navigimi {
   display: flex;
@@ -28,6 +21,7 @@
   flex-direction: row;
   align-items: center;
 }
+
 
 .navigimi ul {
   display: flex;
@@ -48,6 +42,7 @@
   color: white;
 }
 
+
 .regj {
   background-color: white;
   color: #1C9FA7;
@@ -58,26 +53,42 @@
   cursor: pointer;
 }
 
+
 .nav-start a:hover {
   color: #474646;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION 1 */
 .content {
   background-image: url(FOTO2.jpg);
   background-attachment: scroll;
   width: 95%;
   height: 700px;
-  background-size: cover;
+  background-size: 100% 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
+
+
 
 .textbox {
   display: flex;
-  flex-direction: column;
+  margin-left: 80px;
+  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .textbox h2 {
@@ -86,6 +97,7 @@
   line-height: 1.3em;
   font-weight: 500;
   letter-spacing: 0.5mm;
+
   animation: fadeInLeft;
   animation-duration: 1s;
 }
@@ -93,21 +105,27 @@
 .paragrafi {
   margin-top: 20px;
   color: #474646;
-  font-size: 0.8em;
+  font-size: 0.4em;
   line-height: 1.2em;
   letter-spacing: 0.0mm;
+
 }
 
 .textbox h2 span {
-  color: #1C9FA7;
+  color:#1C9FA7 ;
+ 
   font-weight: 900;
 }
 
+
 .btn {
+  /* display: flex;     - OSHT (PURPLE-UNDERLINE) VIZA TE CAKTO TERMININ -*/ 
   margin-top: 20px;
   background-color: #1C9FA7;
   border: none;
   outline: none;
+
+
 }
 
 .textbox h2 .btn {
@@ -117,11 +135,20 @@
   font-size: 17px;
   font-weight: bold;
   cursor: pointer;
+  
+
 }
 
 .textbox h2 .btn:hover {
   color: #474646;
+
+
 }
+
+
+/* SECTION 2 */
+
+
 
 .services {
   background-color: #f8f6f6;
@@ -129,11 +156,9 @@
 
 .Teksti {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 40px 5%;
-  text-align: center;
 }
 
 .Teksti p {
@@ -143,23 +168,24 @@
   font-weight: 600;
   margin-top: 40px;
 }
-
 .Teksti p span {
-  color: #1C9FA7;
+  color:#1C9FA7;
 }
 
 .rubrikat {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 5%;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
 }
+
 
 .card {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
@@ -194,67 +220,300 @@
   padding: 20px;
   box-sizing: border-box;
   background-color: #f2f2f2;
-  transform: translateZ(100px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover .card__content {
-  transform: translateZ(0);
+  transform: rotateX(0deg);
 }
 
 .card__title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
 }
 
 .card__description {
-  font-size: 0.8em;
-  color: #666;
-  margin-bottom: 20px;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
 
-.card__button {
+
+
+
+/* CAKTO TERMININ */
+.background1{
   background-color: #1C9FA7;
+}
+.CaktoTerminin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  font-size: 30px;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 0.8em;
-  font-weight: bold;
-  cursor: pointer;
+}
+.forma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.card__button:hover {
-  background-color: #474646;
-}
-
-.footer {
-  background-color: #1C9FA7;
-  padding: 20px 5%;
+.forma1{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  color: white;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+
+  background-color: #ffffff;
+  margin-top: 80px;
+
+  animation: bounceInDown;
+  animation-duration: 1s;
+}
+.forma1 p{
+  font-weight: bold;
+  color: #1C9FA7;
+  margin-top: 10px;
+}
+
+.inputet {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  gap: 10px;
+  animation: bounceInDown;
+  animation-duration: 1s;
+  
+}
+.inputet3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+  animation: bounceInDown;
+  animation-duration: 1s;
+}
+
+.inputet  input {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 50px;
+  width: 390px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+.inputet3  input {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 50px;
+  width: 390px;
+  border: none;
+  border-radius: 10px;
   text-align: center;
 }
 
-.footer p {
-  margin-bottom: 10px;
-}
-
-.footer a {
+.inputet label {
+  display: flex;
+  justify-content: flex-start;
   color: white;
-  text-decoration: none;
+  margin-bottom: 4px;
+}
+.inputet3 label {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 4px;
+}
+.inputet3 select{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 50px;
+  width: 390px;
+  border: none;
+  border-radius: 10px;
 }
 
-.footer a:hover {
-  text-decoration: underline;
+.inputet5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+  animation: bounceInDown;
+  animation-duration: 1s;
 }
+
+.inputet5  input {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 50px;
+  width: 390px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+.inputet5 label {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 4px;
+}
+.butonicakto {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION 3 ME PJESEN E SLIDERIT */
+
+
+.fototesliderit img {
+  width: 100%;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+}
+
+
+
+
+
+
+.card1 {
+  width: 300px;
+  border-radius: 0.5rem;
+  background-color: #dadada ;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 4px solid transparent;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card1 a {
+  text-decoration: none
+}
+
+.content2 {
+  padding: 1.1rem;
+}
+.image5 {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+.image5 img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.image1 {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+.image1 img {
+  height: 300px;
+  width: 200px;
+}
+
+.title1 {
+  display: flex;
+  justify-content: center;
+  color: #111827;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #1C9FA7;
+  padding: 4px 8px;
+ 
+} 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -443,8 +702,4 @@
   line-height: 1rem;
   color: rgb(255, 255, 255);
 }
-
-
-
-
 

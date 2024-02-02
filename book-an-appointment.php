@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
     <title>Kontakti</title>
 
     <link rel="stylesheet" href="lidhja_me_css.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
 
                     <ul>
 
-                        <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="images/logo-bardh.png"
+                        <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="1.png"
                                     alt=""></a> </li>
                         <li> <a href="index.php">Grieta</a> </li>
                         <li> <a href="sherbimet.php" target=”_blank”>Shërbimet</a> </li>

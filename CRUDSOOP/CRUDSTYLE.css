@@ -1,0 +1,97 @@
+
+/* Reset default styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+font-family: Arial, sans-serif;
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+/* Container styles */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Header styles */
+h3 {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+hr {
+border: none;
+border-top: 1px solid #ccc;
+margin-bottom: 20px;
+}
+
+.alert {
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 4px;
+}
+
+.alert-success {
+background-color: #d4edda;
+color: #155724;
+}
+
+.alert-danger {
+background-color: #f8d7da;
+color: #721c24;
+}
+
+/* Form styles */
+form {
+margin-bottom: 20px;
+}
+
+.form-control {
+width: 30%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-bottom: 10px;
+}
+
+.custom-file {
+margin-bottom: 10px;
+}
+
+.img-thumbnail {
+margin-top: 10px;
+}
+
+/* Table styles */
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+th, td {
+padding: 10px;
+text-align: left;
+border-bottom: 1px solid #ccc;
+}
+
+th {
+background-color: #f2f2f2;
+font-weight: bold;
+}
+
+/* Link styles */
+a {
+color: #007bff;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}

@@ -91,10 +91,7 @@
     display: flex;
     justify-content: space-evenly;
 
-    
-
-    background:url(back1.png)   ;
-
+    background:url(images/back1.png)   ;
     height: 700px;
     width: 100%;
    
@@ -161,117 +158,6 @@ border-bottom-right-radius: 40px;
 }
 
 
-
-/* .footeri1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #1C9FA7;
-    margin-top: 20px;
-}
-
-.footeri {
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.Logo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #474646;
-    font-weight: bolder;
-    font-size: 20px;
-}
-.termini {
-    margin-top: 20px;
-    color: white;
-}
-.termini p {
-    line-height: 20px;
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* Stilizimi për pajisjet mobile */
-@media only screen and (max-width: 768px) {
-    .thonjezat1, .thonjezat2 {
-      justify-content: center; /* Qendro elementet në qendër */
-      margin: 0; /* Fshij marginat */
-    }
-    
-    .boxxxi, .boxxxi1, .Klienti2 {
-      width: 80%; /* Redukto gjërësinë e kutive përmbajtëse */
-      margin: 20px 0; /* Shto një hapësirë në mes të elementeve */
-    }
-    
-    .pershkrimi {
-      padding: 10px; /* Redukto padding-un për tekstin */
-      text-align: center; /* Qendro tekstin */
-    }
-    
-    .container999 {
-      flex-direction: column; /* Ndërro drejtimin e elementeve në kolonë */
-      align-items: center; /* Qendro elementet në qendër */
-      height: auto; /* Përshtato lartësinë bazuar në përmbajtjen e brendshme */
-      background-size: cover; /* Mbush hapësirën e fushës */
-      padding: 20px; /* Shto një padding përreth përmbajtjes */
-    }
-    
-    .main999 {
-      flex-direction: column; /* Ndërro drejtimin e elementeve në kolonë */
-      align-items: center; /* Qendro elementet në qendër */
-      margin: 0; /* Fshij marginat */
-    }
-    
-    .d1 {
-      width: 100%; /* Mbush gjërësinë e prindit */
-      margin-bottom: 20px; /* Shto një hapësirë midis elementeve */
-    }
-    
-    .g, .g2, .g3, .g4 {
-      padding: 0 10px; /* Redukto padding-un për tekstin */
-      text-align: center; /* Qendro tekstin */
-    }
-    
-    hr {
-      margin: 20px auto; /* Shto një hapësirë mbi dhe poshtë linjës */
-    }
-    
-    .Copyright {
-      text-align: center; /* Qendro tekstin */
-    }
-    
-    .feedback, .provide {
-      font-size: 16px; /* Redukto madhësinë e fontit */
-    }
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main999{
 display: flex;
 flex-direction: row;
@@ -318,5 +204,86 @@ color:#1C9FA7;
 #c3{
 font-size: 15px;
 font-weight: bold;
-margin-top: 10px;
+/* margin-top: 10px; */
 } 
+
+/* Përmirësimet për pajisjet mobile duke përdorur media queries */
+@media screen and (max-width:600px) {
+      /* Thonjezat */
+      .thonjezat1,
+      .thonjezat2 {
+          margin-right: 20px;
+          margin-left: 20px;
+        
+      }
+  
+      /* Klientët */
+      .Klienti1,
+      .Klienti2 {
+          margin-top: 20px;
+      }
+  
+      /* Koka e faqes */
+      .header {
+          padding: 10px;
+      }
+  
+      /* Boxet e klientëve */
+      .boxxxi {
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: -20px;
+      }
+  
+      /* Fotot e klientëve */
+      .fotoKl1,
+      .fotoKl2 {
+          margin-top: -120px;
+      }
+  
+      /* Përshkrimi */
+      .pershkrimi {
+          padding: 0 20px;
+      }
+  
+      /* Kontenere */
+      .container999 {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          padding: 20px;
+      }
+  
+      /* Kryesorja */
+      .main999 {
+          flex-direction: column;
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+  
+      /* Menuja */
+      .g2 {
+          margin-left: 20px;
+      }
+  
+      /* Stafi dhe sherbimet */
+      .g3,
+      .g4 {
+          padding-left: 20px;
+      }
+  
+      /* Forma e kontaktit */
+      form {
+          width: 100%;
+          margin-top: 10px;
+      }
+  
+      /* Footeri */
+      .klasaefooterit {
+          padding-left: 20px;
+          padding-right: 20px;
+         
+      }
+
+}

@@ -28,7 +28,7 @@ if(isset($_POST['butonicakto'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lidhja_me_css.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Termini</title>
@@ -44,7 +44,7 @@ if(isset($_POST['butonicakto'])){
 
                 <ul>
 
-                    <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="images/logo-bardh.png" alt=""></a>
+                    <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="1.png" alt=""></a>
                     </li>
                     <li> <a href="index.php">Grieta</a> </li>
                     <li> <a href="sherbimet.php" target=”_blank”>Shërbimet</a> </li>

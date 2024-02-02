@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="lidhja_me_cssSH.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
                     <ul>
 
-                        <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="images/logo-bardh.png"
+                        <li> <a href="index.php"><img style="width: 70px; height: 60px;" src="1.png"
                                     alt=""></a> </li>
                         <li> <a href="index.php">Grieta</a> </li>
                         <li> <a href="sherbimet.php" target=”_blank”>Shërbimet</a> </li>

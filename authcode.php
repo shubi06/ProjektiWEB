@@ -68,10 +68,12 @@ else if (isset($_POST['login_btn']))
         $useremri = $userdata['emri'];
         $useremail = $userdata['email'];
         $role_as = $userdata['role_as'];
+        $userid=$userdata['id'];
         
         $_SESSION['auth_user'] = [
             'emri' => $useremri,
-            'email'=> $useremail 
+            'email'=> $useremail,
+            'id'=>$userid
         ];
     
         $_SESSION['role_as']=$role_as;

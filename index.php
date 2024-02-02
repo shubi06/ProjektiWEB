@@ -64,7 +64,7 @@ session_start();
 
             <div class="nav-end">
                 <ul>
-                    <li> <a href="login.php" target=”_blank”> <button class="regj"> Kyqu</button></a> </li>
+                    <li> <a href="login.php" > <button class="regj"> Kyqu</button></a> </li>
                     <li> <a href="register.php" target=”_blank”> <button class="regj"> Regjistrohu</button></a> </li>
                 </ul>
             </div>

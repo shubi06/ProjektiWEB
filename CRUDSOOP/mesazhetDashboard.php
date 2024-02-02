@@ -1,18 +1,17 @@
 <?php
 include ('../database/dbconnection.php');
-if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
-    header('Location: ../login.php');
-    exit; // Ndalo ekzekutimin e kodit pas redirektimit
-}
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
 
-if (isset($_SESSION['role_as'])) {
-    $role_as = $_SESSION['role_as'];
-    
-    // Nëse përdoruesi ka rolin 0, ridrejtojini në faqen fillestare
-    if ($role_as == 0) {
-        header('Location: ../index.php');
-        exit; // Ndalo ekzekutimin e kodit pas redirektimit
-    }
+
+    $query = "DELETE FROM kontakti WHERE id=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    header('location:mesazhetDashboard.php');
+    $_SESSION['response'] = "Successfully Deleted!";
+    $_SESSION['res_type'] = "danger";
 }
  
   ?>
@@ -79,6 +78,10 @@ if (isset($_SESSION['role_as'])) {
                             <td><?php echo  $row['numri']; ?></td>
                             <td><?php echo  $row['email']; ?></td>
                             <td><?php echo  $row['mesazhi']; ?></td>
+                            <td>
+                            <a href="mesazhetDashboard.php?delete=<?php echo $row['id']; ?>" onclick="return confirm('Do you want delete this record?');">Delete</a>
+
+                                            <td>
                         </tr>
                         <?php } ?>
                     </tbody>

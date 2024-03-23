@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-// include ('middleware/adminMiddleware.php');
 
 
 include('./CRUDSOOP/MjekuFront.php');

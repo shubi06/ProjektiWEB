@@ -95,7 +95,7 @@ $foto = $update ? $updateData['foto'] : '';
                                 <!-- Add an input field to upload a new image -->
                                 <input type="file" name="foto" class="custom-file">
                                 <!-- Display the current image if available -->
-                                <img src="<?php echo $foto; ?>" width="120" class="img-thumbnail">
+                                <!-- <img src="" width="120" class="img-thumbnail"> -->
                             </div>
                             <div>
                                 <?php if ($update == true) { ?>
@@ -142,7 +142,7 @@ $foto = $update ? $updateData['foto'] : '';
                                     <td><?php echo $row['titulli']; ?></td>
                                     <td><?php echo $row['eksperienca']; ?></td>
                                     <td><?php echo $row['sherbimi']; ?></td>
-                                    <td><?php echo $row['ndryshimi']; ?></td>
+                                     <td><?php echo $row['ndryshimi']; ?></td>
                                     <td>
                                         <a href="detailsOOP.php?details=<?php echo $row['id']; ?>">Details</a> |
                                         <a href="indexMjeku.php?delete=<?php echo $row['id']; ?>"

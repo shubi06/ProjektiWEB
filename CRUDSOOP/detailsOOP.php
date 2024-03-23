@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PHP MySQLi CRUD Prepared Statement with upload image</title>
+    <title>Mjeku</title>
 
 </head>
 

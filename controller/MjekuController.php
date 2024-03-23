@@ -41,7 +41,7 @@ class MjekuController
             $sherbimi = $_POST['sherbimi'];
 
             $foto = $_FILES['foto']['name'];
-            $upload = "CRUDSOOP/uploads/" . $foto;
+            $upload = "../CRUDSOOP/" . $foto;
 
             $query = "INSERT INTO mjeku (titulli, eksperienca, sherbimi, foto) VALUES (?, ?, ?,?)";
             $stmt = $this->conn->prepare($query);
@@ -112,7 +112,7 @@ class MjekuController
         $userId = $_SESSION['auth_user']['id'];
 
         if (isset($_FILES['foto']['name']) && ($_FILES['foto']['name'] != "")) {
-            $newimage = "CRUDSOOP/uploads/" . $_FILES['foto']['name'];
+            $newimage = "../CRUDSOOP/" . $_FILES['foto']['name'];
             unlink($oldimage);
             move_uploaded_file($_FILES['foto']['tmp_name'], $newimage);
         } else {

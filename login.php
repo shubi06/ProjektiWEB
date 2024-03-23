@@ -11,7 +11,8 @@ if(isset($_SESSION['auth'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+
     <style>
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
@@ -51,9 +52,7 @@ if(isset($_SESSION['auth'])) {
                 <label for="password">Password</label>
                 <input type="password" id="passwordID"  name="password" placeholder=""><label  id="erroripasswordii" for="email"></label>
                 <!-- <div class="error-message" id="passwordError"></div> -->
-                <div class="forgot">
-                    <a rel="noopener noreferrer" href="#">Keni harruar Passwordin ?</a>
-                </div>
+             
             </div>
             <button type="submit" name="login_btn" class="sign" onclick='return LOGINValidation()'>KYQU</button>
         </form>
@@ -82,7 +81,7 @@ if(isset($_SESSION['auth'])) {
         </div> -->
         <br>
         <p class="signup">Nuk keni një llogari?
-            <a rel="noopener noreferrer" href="register.html" target="_blank" class=""><b>REGJISTROHU</b></a>
+            <a rel="noopener noreferrer" href="register.php" target="_blank" class=""><b>REGJISTROHU</b></a>
         </p>
     </div>
 </div>

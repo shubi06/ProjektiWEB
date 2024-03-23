@@ -34,7 +34,7 @@ class sherbimetController
            
      
             $fotoSh=$_FILES['fotoSh']['name'];
-            $upload="CRUDSOOP/uploads/".$fotoSh;
+            $upload="../CRUDSOOP/".$fotoSh;
      
             $query="INSERT INTO sherbimet (emertim,pershkrimi,fotoSh) VALUES (?,?,?)";
             $stmt = $this->conn->prepare($query);
@@ -104,7 +104,7 @@ class sherbimetController
             $userId = $_SESSION['auth_user']['id'];
      
             if(isset($_FILES['fotoSh']['name'])&&($_FILES['fotoSh']['name']!="")){
-                $newimage="CRUDSOOP/uploads/".$_FILES['fotoSh']['name'];
+                $newimage="../CRUDSOOP/".$_FILES['fotoSh']['name'];
                 unlink($oldimage);
                 move_uploaded_file($_FILES['fotoSh']['tmp_name'], $newimage);
             }

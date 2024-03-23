@@ -72,16 +72,16 @@ if (isset($_SESSION['role_as'])) {
                             <input type="hidden" name="id" value="<?php echo  $id; ?>">
                             <div>
                                 <input type="text" name="emertim" value="<?php echo  $emertim; ?>" class="form-control"
-                                    placeholder="Emri" required>
+                                    placeholder="Emertimi" required>
                             </div>
                             <div>
                                 <input type="text" name="pershkrimi" value="<?php echo  $pershkrimi; ?>"
-                                    class="form-control" placeholder="Eksperienca" required>
+                                    class="form-control" placeholder="Pershkrimi" required>
                             </div>
                             <div>
-                                <input type="hidden" name="oldimage" value="<?php echo  $fotoSh; ?>">
+                                <!-- <input type="hidden" name="oldimage" value=""> -->
                                 <input type="file" name="fotoSh" class="custom-file">
-                                <img src="<?php echo  $fotoSh; ?>" width="120" class="img-thumbnail">
+                                
                             </div>
                             <div">
                                 <?php if ($update == true) { ?>

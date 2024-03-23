@@ -63,7 +63,7 @@ class Mjeku {
                
             
             echo ' <div class="image1">' ;
-            echo '<img src="' . $this->getFoto() . '" alt="">';
+            echo '<img src="CRUDSOOP/' . $this->getFoto() . '" alt="">';
             echo '</div>';
            echo   '<div class="content2">';
                             

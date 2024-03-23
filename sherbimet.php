@@ -12,7 +12,7 @@ include ('./database/dbconnection.php');
 $select_query = "SELECT * FROM `sherbimet` ORDER BY id";
 $result_query = mysqli_query($conn, $select_query); 
 
-$desiredCategoryId='';
+$desiredCategoryId='18';
 
 ?>
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ $desiredCategoryId='';
 
         <div class="services">
             <div class="Teksti">
-                <p><span>SHËRBIMET</span> TONA</p>
+                <p ><span>SHËRBIMET</span> TONA</p>
             </div>
 
             <div class="rubrikat">

@@ -55,7 +55,7 @@ class Sherbimet {
         if ($categoryId === null || $this->iPerketKategoris($categoryId)) {
     
           
-        echo   '<img style="height: 130px; width: 130px;" src="../CRUDSOOP/uploads/"' . $this->getFotoSh(). 'alt="">';
+            echo '<img style="height: 130px; width: 130px;" src="CRUDSOOP/' . $this->getFotoSh() . '" alt="">';
            echo  '<div class="card__content">';
             echo  '<p class="card__title">'. $this->getEmertim() . '</p>';
             echo    '<p class="card__description">' . $this->getEmertim().  '</p>';

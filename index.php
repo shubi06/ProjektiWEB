@@ -64,7 +64,7 @@ session_start();
 
             <div class="nav-end">
                 <ul>
-                    <li> <a href="login.php" > <button class="regj"> Kyqu</button></a> </li>
+                    <li> <a href="login.php"> <button class="regj"> Kyqu</button></a> </li>
                     <li> <a href="register.php" target=”_blank”> <button class="regj"> Regjistrohu</button></a> </li>
                 </ul>
             </div>
@@ -89,11 +89,25 @@ session_start();
                             <p>Grieta është një platformë inovative shëndetësore që sjell një eksperiencë të re dhe
                                 të përmirësuar për pacientët. </p>
                         </div>
+
+                        <?php 
+            if(isset($_SESSION['auth'])) 
+            {   
+        ?>
                         <a style="text-decoration: none;" href="Termini.php" target="_blank"> <button class="btn"> CAKTO
                                 TERMININ </button>
                     </h2> </a>
+                    <?php 
+            }
+            else {
+                ?>
+                    <a style="text-decoration: none;" href="login.php" target="_blank"> <button class="btn"> CAKTO
+                            TERMININ </button>
+                        </h2> </a>
                 </div>
-
+                <?php 
+            }
+            ?>
             </div>
         </div>
 
